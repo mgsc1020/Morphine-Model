@@ -1,9 +1,9 @@
 {
-    "$schema": "https://github.com/Open-Systems-Pharmacology/QualificationPlan/releases/download/v3.1/OSP_Qualification_Plan_Schema.json",
+    "$schema": "https://github.com/Open-Systems-Pharmacology/QualificationPlan/releases/download/v3.7/OSP_Qualification_Plan_Schema.json",
     "Projects": [
         {
-            "Id": "Compound",
-            "Path": "../../Compound.json",
+            "Id": "Morphine",
+            "Path": "../../Morphine-Model.json",
             "BuildingBlocks": [],
             "SimulationParameters": []
         }
@@ -121,19 +121,89 @@
         },
         "AllPlots": [
             {
-                "Project": "Compound",
-                "Simulation": "Sim 1 - intravenous",
+                "Project": "Morphine",
+                "Simulation": "Lötsch2002_IV_1mg_M6G",
                 "SectionReference": "ct-profiles"
             },
             {
-                "Project": "Compound",
-                "Simulation": "Sim 2 - peroral",
+                "Project": "Morphine",
+                "Simulation": "Lötsch2002_IV_5.64mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Westerling1995_IV_7.59mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Hoskin1989_IV_3.76mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Lötsch1998_IVdosageA_0.015+0.0288mg/kg_M6G",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Lötsch1998_IVdosageB_0.029+0.056mg/kg_M6G",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Lötsch1998_IVdosageC_0.044+0.088mg/kg_M6G",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Lötsch1998_IVdosageE_A+D_M6G",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Dershwitz2000_IV_6.62mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Stuart-Harris2000_IV_7.52mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Sawe1985_IV_3.55mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Crews2001_IV_7.52mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Baillie1989_IV_7.52mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Osborne1990_IV_3.76mg",
+                "SectionReference": "ct-profiles"
+            },
+            {
+                "Project": "Morphine",
+                "Simulation": "Ferslew2015_IV_3.76mg",
                 "SectionReference": "ct-profiles"
             }
         ],
         "GOFMergedPlots": [
             {
-                "Title": "Goodness of fit plot for concentration in plasma",
+                "Title": "Goodness of fit plot for morphine plasma concentration",
                 "SectionReference": "diagnostics-plots",
                 "Artifacts": [
                     "Plot",
@@ -146,28 +216,264 @@
                 ],
                 "Groups": [
                     {
-                        "Caption": "Intravenous administration",
+                        "Caption": "Morphine (model building)",
                         "Symbol": "Circle",
                         "OutputMappings": [
                             {
-                                "Project": "Compound",
-                                "Simulation": "Sim 1 - intravenous",
-                                "Output": "Organism|PeripheralVenousBlood|COMPOUND|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Observed data iv",
-                                "Color": "#FF0000"
+                                "Project": "Morphine",
+                                "Simulation": "Sawe1985_IV_3.55mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Sawe1985_Morphine",
+                                "Color": "#1F77B4"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Crews2001_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Crews2001_Morphine",
+                                "Color": "#FF7F0E"
                             }
                         ]
                     },
                     {
-                        "Caption": "Oral administration",
+                        "Caption": "Morphine (model verification)",
                         "Symbol": "Square",
                         "OutputMappings": [
                             {
-                                "Project": "Compound",
-                                "Simulation": "Sim 2 - peroral",
-                                "Output": "Organism|PeripheralVenousBlood|COMPOUND|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Observed data po",
-                                "Color": "#FF0000"
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch2002_IV_5.64mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch2002_Morphine",
+                                "Color": "#2CA02C"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Westerling1995_IV_7.59mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Westerling1995_Morphine",
+                                "Color": "#D62728"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Hoskin1989_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": [
+                                    "Hoskin1989_Sub1_Morphine",
+                                    "Hoskin1989_Sub2_Morphine",
+                                    "Hoskin1989_Sub3_Morphine",
+                                    "Hoskin1989_Sub4_Morphine",
+                                    "Hoskin1989_Sub5_Morphine",
+                                    "Hoskin1989_Sub6_Morphine"
+                                ],
+                                "Color": "#9467BD"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_D_Morphine",
+                                "Color": "#BCBD22"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageE_A+D_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_E_Morphine",
+                                "Color": "#17BECF"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Dershwitz2000_IV_6.62mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Dershwitz2000_Morphine",
+                                "Color": "#FFBB78"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Stuart-Harris2000_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Stuart-Harris2000_Morphine",
+                                "Color": "#AEC7E8"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Baillie1989_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Baillie1989_Morphine",
+                                "Color": "#C49C94"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Osborne1990_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Osborne1990_Morphine",
+                                "Color": "#98DF8A"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Ferslew2015_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Ferslew2015_Morphine",
+                                "Color": "#FF9896"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Goodness of fit plot for morphine-6-glucuronide plasma concentration",
+                "SectionReference": "diagnostics-plots",
+                "Artifacts": [
+                    "Plot",
+                    "GMFE",
+                    "Measure"
+                ],
+                "PlotTypes": [
+                    "predictedVsObserved",
+                    "residualsOverTime"
+                ],
+                "Groups": [
+                    {
+                        "Caption": "Morphine-6G (model building)",
+                        "Symbol": "Diamond",
+                        "OutputMappings": [
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Crews2001_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Crews2001_M6G",
+                                "Color": "#FF7F0E"
+                            }
+                        ]
+                    },
+                    {
+                        "Caption": "Morphine-6G (model verification)",
+                        "Symbol": "Triangle",
+                        "OutputMappings": [
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch2002_IV_1mg_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch2002_M6G",
+                                "Color": "#2CA02C"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageA_0.015+0.0288mg/kg_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_A_M6G",
+                                "Color": "#8C564B"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageB_0.029+0.056mg/kg_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_B_M6G",
+                                "Color": "#E377C2"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageC_0.044+0.088mg/kg_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_C_M6G",
+                                "Color": "#7F7F7F"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_D_M6G",
+                                "Color": "#BCBD22"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Lötsch1998_IVdosageE_A+D_M6G",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Lötsch1998_E_M6G",
+                                "Color": "#17BECF"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Westerling1995_IV_7.59mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Westerling1995_M6G",
+                                "Color": "#D62728"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Osborne1990_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Osborne1990_M6G",
+                                "Color": "#98DF8A"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Stuart-Harris2000_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Stuart-Harris2000_M6G",
+                                "Color": "#AEC7E8"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Goodness of fit plot for morphine-3-glucuronide plasma concentration",
+                "SectionReference": "diagnostics-plots",
+                "Artifacts": [
+                    "Plot",
+                    "GMFE",
+                    "Measure"
+                ],
+                "PlotTypes": [
+                    "predictedVsObserved",
+                    "residualsOverTime"
+                ],
+                "Groups": [
+                    {
+                        "Caption": "Morphine-3G (model building)",
+                        "Symbol": "Asterisk",
+                        "OutputMappings": [
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Sawe1985_IV_3.55mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Sawe1985_M3G",
+                                "Color": "#1F77B4"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Crews2001_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Crews2001_M3G",
+                                "Color": "#FF7F0E"
+                            }
+                        ]
+                    },
+                    {
+                        "Caption": "Morphine-3G (model verification)",
+                        "Symbol": "Plus",
+                        "OutputMappings": [
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Osborne1990_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Osborne1990_M3G",
+                                "Color": "#98DF8A"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Ferslew2015_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Ferslew2015_M3G",
+                                "Color": "#FF9896"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Stuart-Harris2000_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Stuart-Harris2000_M3G",
+                                "Color": "#AEC7E8"
                             }
                         ]
                     }
@@ -180,15 +486,21 @@
     },
     "Inputs": [
         {
-            "Project": "Compound",
-            "Name": "COMPOUND",
+            "Project": "Morphine",
+            "Name": "Morphine",
             "Type": "Compound",
             "SectionReference": "final-input-parameters"
         },
         {
-            "Project": "Compound",
-            "Name": "Tablet",
-            "Type": "Formulation",
+            "Project": "Morphine",
+            "Name": "Morphine-6G",
+            "Type": "Compound",
+            "SectionReference": "final-input-parameters"
+        },
+        {
+            "Project": "Morphine",
+            "Name": "Morphine-3G",
+            "Type": "Compound",
             "SectionReference": "final-input-parameters"
         }
     ],
