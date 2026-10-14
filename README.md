@@ -11,11 +11,10 @@ This repository contains:
 The model was developed and evaluated for morphine, M6G, and M3G using plasma concentration data from several clinical studies in adults. The model is based on a modified version of the morphine and M6G PBPK model published by Schaefer et al. [1], extended to include M3G and additional clinical datasets.
 For morphine, the model was developed and evaluated against intravenous bolus and infusion administration (dosing range of 3.55 mg to 7.59 mg, and a weight-normalized bolus-plus-4h-infusion regimen of 0.124+0.177 mg/kg).
 For M6G, the model was evaluated against direct intravenous administration (1 mg bolus and weight-normalized bolus-plus-4h-infusion regimens of 0.015+0.0288 to 0.044+0.088 mg/kg) and as the metabolite formed from the administered morphine doses.
-For M3G, the model was developed and evaluated as the metabolite formed from intravenous morphine doses of 3.55 mg to 7.52 mg.
+For M3G, the model was developed and evaluated as the metabolite formed from intravenous morphine doses of 3.55 mg to 7.52 mg. 
+The model was developed and evaluated for intravenous administration only. No clinical data after direct administration of M3G were used.
 
 The PK-Sim snapshot file contains simulations and the observed data of all clinical studies used for model development and evaluation.
-
-<b>Caveat: The model was developed and evaluated for intravenous administration only. No clinical data after direct administration of M3G were used, and the lipophilicity and solubility of M3G are predicted values.</b><br>
 
 ## Code of conduct
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct).
