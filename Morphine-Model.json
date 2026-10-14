@@ -1300,7 +1300,7 @@
         },
         {
           "Name": "InputDose",
-          "Value": 7.58,
+          "Value": 7.52,
           "Unit": "mg"
         },
         {
@@ -3167,8 +3167,19 @@
       ],
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)"
+        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Sawe1985_M3G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Sawe1985_Morphine"
+        }
       ],
       "Individual": "Dershwitz2000",
       "Compounds": [
@@ -3337,7 +3348,7 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Sawe1985_IV_3.55mg",
-          "OriginText": "Morphine-Model\nSawe1985_IV_3.55mg\n2026-09-11 14:56"
+          "OriginText": "Morphine-model\nSawe1985_IV_3.55mg\n2026-10-14 16:48"
         }
       ]
     },
@@ -4199,8 +4210,19 @@
       ],
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)"
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch1998_E_M6G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch1998_E_Morphine"
+        }
       ],
       "Individual": "Lötsch1998",
       "Compounds": [
@@ -4372,7 +4394,7 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Lötsch1998_IVdosageE_A+D_M6G",
-          "OriginText": "Morphine-M6G-Model_Cleaned\nLötsch1998_IVdosageE_A+D_M6G\n2026-09-10 13:26"
+          "OriginText": "Morphine-model\nLötsch1998_IVdosageE_A+D_M6G\n2026-10-14 16:51"
         }
       ]
     },
@@ -4678,6 +4700,23 @@
         "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
         "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_Morphine"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_M6G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_M3G"
+        }
+      ],
       "Individual": "Crews2001",
       "Compounds": [
         {
@@ -4865,7 +4904,7 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Crews2001_IV_7.52mg",
-          "OriginText": "Morphine-Model\nCrews2001_IV_7.52mg\n2026-09-11 14:56"
+          "OriginText": "Morphine-model\nCrews2001_IV_7.52mg\n2026-10-14 16:48"
         }
       ]
     }
