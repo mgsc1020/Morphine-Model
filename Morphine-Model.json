@@ -612,7 +612,7 @@
           "DataSource": "PI",
           "Species": "Human",
           "Molecule": "UGT2B7_M6G",
-          "Metabolite": "Morphin-6G",
+          "Metabolite": "Morphine-6G",
           "Parameters": [
             {
               "Name": "Intrinsic clearance",
@@ -1374,864 +1374,6 @@
   ],
   "Simulations": [
     {
-      "Name": "Lötsch2002_IV_1mg_M6G",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Lötsch2002_M6G"
-      ],
-      "Solver": {
-        "AbsTol": 1E-09,
-        "RelTol": 0.0001
-      },
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 9.5,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9698140055
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Lötsch2002_IV_1mg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Lötsch2002_M6G"
-        }
-      ],
-      "Individual": "Lötsch1998",
-      "Compounds": [
-        {
-          "Name": "Morphine-6G",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "Renal Clearances-Eissig et al.",
-              "SystemicProcessType": "Renal"
-            },
-            {
-              "Name": "Glomerular Filtration-Eissig et al.",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Lötsch2002_IV_1mg_M6G"
-          }
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "µmol/l",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Solid",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Lötsch2002_IV_1mg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#0000FF",
-                "LegendIndex": 1
-              }
-            },
-            {
-              "Name": "Lötsch2002_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Lötsch2002_M6G|Time",
-              "Y": "Lötsch2002_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
-              "CurveOptions": {
-                "Color": "#0000FF",
-                "LegendIndex": 2,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            }
-          ],
-          "Name": "Lötsch2002_IV_1mg_M6G",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Lötsch2002_IV_1mg_M6G",
-          "OriginText": "Morphine-M6G-Model_Cleaned\nLötsch2002_IV_1mg_M6G\n2026-09-07 16:41"
-        }
-      ]
-    },
-    {
-      "Name": "Lötsch2002_IV_5.64mg",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Lötsch2002_Morphine"
-      ],
-      "Solver": {
-        "AbsTol": 1E-09,
-        "RelTol": 0.0001
-      },
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 9.5,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Lötsch2002_IV_5.64mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Lötsch2002_Morphine"
-        }
-      ],
-      "Individual": "Lötsch2002",
-      "Compounds": [
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Lötsch2002_IV_5.64mg_Morphine"
-          }
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "µmol/l",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "",
-              "Type": "Y2",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Lötsch2002_IV_5.64mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 4
-              }
-            },
-            {
-              "Name": "Lötsch2002_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Lötsch2002_Morphine|Time",
-              "Y": "Lötsch2002_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 5,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            }
-          ],
-          "Name": "Lötsch2002_IV_5.64mg",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#00FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Lötsch2002_IV_5.64mg",
-          "OriginText": "Morphine-M6G-Model_Cleaned\nLötsch2002_IV_5.64mg\n2026-09-10 13:29"
-        }
-      ]
-    },
-    {
-      "Name": "Westerling1995_IV_7.59mg",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Westerling1995_Morphine",
-        "Westerling1995_M6G"
-      ],
-      "Solver": {},
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 6.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9737335936
-        },
-        {
-          "Path": "Events|Westerling1995_IV_7.59mg|Application_1|ProtocolSchemaItem|Infusion time",
-          "Value": 20.0,
-          "Unit": "min"
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Westerling1995_M6G"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Westerling1995_Morphine"
-        }
-      ],
-      "Individual": "Westerling1995",
-      "Compounds": [
-        {
-          "Name": "Morphine-6G",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "Renal Clearances-Eissig et al.",
-              "SystemicProcessType": "Renal"
-            },
-            {
-              "Name": "Glomerular Filtration-Eissig et al.",
-              "SystemicProcessType": "GFR"
-            }
-          ]
-        },
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-6G"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Westerling1995_IV_7.59mg"
-          }
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "µmol/l",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Solid",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "",
-              "Type": "Y2",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Dash",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#0000FF",
-                "LegendIndex": 8
-              }
-            },
-            {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 7
-              }
-            },
-            {
-              "Name": "Westerling1995_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Westerling1995_Morphine|Time",
-              "Y": "Westerling1995_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 9,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Westerling1995_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Westerling1995_M6G|Time",
-              "Y": "Westerling1995_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
-              "CurveOptions": {
-                "Color": "#0000FF",
-                "LegendIndex": 10,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            }
-          ],
-          "Name": "Westerling1995_IV_7.59mg",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Westerling1995_IV_7.59mg",
-          "OriginText": "Morphine-Model\nWesterling1995_IV_7.59mg\n2026-09-11 14:29"
-        }
-      ]
-    },
-    {
-      "Name": "Hoskin1989_IV_3.76mg",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Hoskin1989_Sub1_Morphine",
-        "Hoskin1989_Sub2_Morphine",
-        "Hoskin1989_Sub5_Morphine",
-        "Hoskin1989_Sub4_Morphine",
-        "Hoskin1989_Sub3_Morphine",
-        "Hoskin1989_Sub6_Morphine"
-      ],
-      "Solver": {},
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 13.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9749109876
-        },
-        {
-          "Path": "Events|Hoskin1989_IV_3.76mg_Morphine|Application_1|ProtocolSchemaItem|Infusion time",
-          "Value": 2.0,
-          "Unit": "min"
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Hoskin1989_Sub1_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Hoskin1989_Sub2_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Hoskin1989_Sub3_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Hoskin1989_Sub4_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Hoskin1989_Sub5_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Hoskin1989_Sub6_Morphine"
-        }
-      ],
-      "Individual": "Hoskin1989",
-      "Compounds": [
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Hoskin1989_IV_3.76mg_Morphine"
-          }
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "ng/ml",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Solid",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 1
-              }
-            },
-            {
-              "Name": "Hoskin1989_Sub6_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Hoskin1989_Sub6_Morphine|Time",
-              "Y": "Hoskin1989_Sub6_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 2,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Hoskin1989_Sub3_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Hoskin1989_Sub3_Morphine|Time",
-              "Y": "Hoskin1989_Sub3_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 5,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Hoskin1989_Sub4_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Hoskin1989_Sub4_Morphine|Time",
-              "Y": "Hoskin1989_Sub4_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 4,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Hoskin1989_Sub5_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Hoskin1989_Sub5_Morphine|Time",
-              "Y": "Hoskin1989_Sub5_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 3,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Hoskin1989_Sub2_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Hoskin1989_Sub2_Morphine|Time",
-              "Y": "Hoskin1989_Sub2_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 6,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Hoskin1989_Sub1_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Hoskin1989_Sub1_Morphine|Time",
-              "Y": "Hoskin1989_Sub1_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 7,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            }
-          ],
-          "Name": "Hoskin1989_IV_3.76mg",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Hoskin1989_IV_3.76mg",
-          "OriginText": "Morphine-M6G-Model_Cleaned\nHoskin1989_IV_3.76mg\n2026-09-10 13:25"
-        }
-      ]
-    },
-    {
       "Name": "Lötsch1998_IVdosageA_0.015+0.0288mg/kg_M6G",
       "Model": "4Comp",
       "ObservedData": [
@@ -2739,187 +1881,6 @@
       ]
     },
     {
-      "Name": "Dershwitz2000_IV_6.62mg",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Dershwitz2000_Morphine"
-      ],
-      "Solver": {},
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 5.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9741260583
-        },
-        {
-          "Path": "Events|Dershwitz2000_IV_6.62mg_Morphine|Application_1|ProtocolSchemaItem|Infusion time",
-          "Value": 7.0,
-          "Unit": "min"
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Dershwitz2000_IV_6.62mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Dershwitz2000_Morphine"
-        }
-      ],
-      "Individual": "Dershwitz2000",
-      "Compounds": [
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Dershwitz2000_IV_6.62mg_Morphine"
-          }
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "µmol/l",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Solid",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Dershwitz2000_IV_6.62mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 1
-              }
-            },
-            {
-              "Name": "Dershwitz2000_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Dershwitz2000_Morphine|Time",
-              "Y": "Dershwitz2000_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 2,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            }
-          ],
-          "Name": "Dershwitz2000_IV_6.62mg",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Dershwitz2000_IV_6.62mg",
-          "OriginText": "Morphine-M6G-Model_Cleaned\nDershwitz2000_IV_6.62mg\n2026-09-10 13:25"
-        }
-      ]
-    },
-    {
       "Name": "Baillie1989_IV_7.52mg",
       "Model": "4Comp",
       "ObservedData": [
@@ -3099,16 +2060,15 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Baillie1989_IV_7.52mg",
-          "OriginText": "Morphine-M6G-Model_Cleaned_Fitted\nBaillie1989_IV_7.52mg\n2026-09-10 18:01"
+          "OriginText": "Morphine-Model\nBaillie1989_IV_7.52mg\n2026-10-15 10:11"
         }
       ]
     },
     {
-      "Name": "Sawe1985_IV_3.55mg",
+      "Name": "Dershwitz2000_IV_6.62mg",
       "Model": "4Comp",
       "ObservedData": [
-        "Sawe1985_M3G",
-        "Sawe1985_Morphine"
+        "Dershwitz2000_Morphine"
       ],
       "Solver": {},
       "OutputSchema": [
@@ -3121,12 +2081,12 @@
             },
             {
               "Name": "End time",
-              "Value": 2.0,
+              "Value": 0.35,
               "Unit": "h"
             },
             {
               "Name": "Resolution",
-              "Value": 20.0,
+              "Value": 300.0,
               "Unit": "pts/h"
             }
           ]
@@ -3135,20 +2095,17 @@
           "Parameters": [
             {
               "Name": "Start time",
-              "Value": 2.0,
+              "Value": 0.35,
               "Unit": "h"
             },
             {
               "Name": "End time",
-              "Value": 12.0,
-              "Unit": "h",
-              "ValueOrigin": {
-                "Source": "Unknown"
-              }
+              "Value": 5.0,
+              "Unit": "h"
             },
             {
               "Name": "Resolution",
-              "Value": 4.0,
+              "Value": 60.0,
               "Unit": "pts/h"
             }
           ]
@@ -3160,25 +2117,19 @@
           "Value": 0.9741260583
         },
         {
-          "Path": "Events|Sawe1985_IV_3.55mg|Application_1|ProtocolSchemaItem|Infusion time",
-          "Value": 2.0,
+          "Path": "Events|Dershwitz2000_IV_6.62mg_Morphine|Application_1|ProtocolSchemaItem|Infusion time",
+          "Value": 7.0,
           "Unit": "min"
         }
       ],
       "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)"
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
       ],
       "OutputMappings": [
         {
           "Scaling": "Log",
-          "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Sawe1985_M3G"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Sawe1985_Morphine"
+          "Path": "Dershwitz2000_IV_6.62mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Dershwitz2000_Morphine"
         }
       ],
       "Individual": "Dershwitz2000",
@@ -3205,14 +2156,12 @@
               "MoleculeName": "CYP3A4"
             },
             {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-3G"
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7"
             },
             {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-6G"
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7"
             },
             {
               "Name": "Glomerular Filtration-M_GFR",
@@ -3220,7 +2169,197 @@
             }
           ],
           "Protocol": {
-            "Name": "Sawe1985_IV_3.55mg"
+            "Name": "Dershwitz2000_IV_6.62mg_Morphine"
+          }
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "µmol/l",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Solid",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Dershwitz2000_IV_6.62mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 1
+              }
+            },
+            {
+              "Name": "Dershwitz2000_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Dershwitz2000_Morphine|Time",
+              "Y": "Dershwitz2000_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 2,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            }
+          ],
+          "Name": "Dershwitz2000_IV_6.62mg",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Dershwitz2000_IV_6.62mg",
+          "OriginText": "Morphine-model\nDershwitz2000_IV_6.62mg\n2026-10-15 10:27"
+        }
+      ]
+    },
+    {
+      "Name": "Ferslew2015_IV_3.76mg",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Ferslew2015_Morphine",
+        "Ferslew2015_M3G"
+      ],
+      "Solver": {},
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 300.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 8.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 60.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "Parameters": [
+        {
+          "Path": "CYP3A4|Ontogeny factor GI",
+          "Value": 0.9820567387
+        },
+        {
+          "Path": "Events|Ferslew2015_IV_3.76mg_Morphine|Application_1|ProtocolSchemaItem|Infusion time",
+          "Value": 5.0,
+          "Unit": "min"
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Ferslew2015_M3G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Ferslew2015_Morphine"
+        }
+      ],
+      "Individual": "Ferslew2015",
+      "Compounds": [
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-6G"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-3G"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Ferslew2015_IV_3.76mg_Morphine"
           }
         },
         {
@@ -3239,8 +2378,8 @@
         {
           "Name": "Morphine-6G",
           "CalculationMethods": [
-            "Cellular partition coefficient method - PK-Sim Standard",
-            "Cellular permeability - PK-Sim Standard"
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
           ],
           "Alternatives": [
             {
@@ -3276,11 +2415,13 @@
               "NumberMode": "Normal"
             },
             {
-              "Unit": "µmol/l",
+              "Unit": "ng/ml",
               "Dimension": "Concentration (molar)",
               "Type": "Y",
               "GridLines": false,
               "Visible": true,
+              "Min": 0.001,
+              "Max": 107.1861,
               "DefaultColor": "#FFFFFF",
               "DefaultLineStyle": "Solid",
               "Scaling": "Log",
@@ -3291,45 +2432,45 @@
             {
               "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
               "X": "Time",
-              "Y": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "Y": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
               "CurveOptions": {
                 "Color": "#FF0000",
-                "LegendIndex": 1
+                "LegendIndex": 3
+              }
+            },
+            {
+              "Name": "Ferslew2015_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Ferslew2015_Morphine|Time",
+              "Y": "Ferslew2015_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 9,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Ferslew2015_M3G-Morphine-3G-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Ferslew2015_M3G|Time",
+              "Y": "Ferslew2015_M3G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-3G|Measurement",
+              "CurveOptions": {
+                "Color": "#008000",
+                "LegendIndex": 10,
+                "LineStyle": "None",
+                "Symbol": "Circle"
               }
             },
             {
               "Name": "Morphine-3G-Peripheral Venous Blood-Plasma-Concentration",
               "X": "Time",
-              "Y": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+              "Y": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
               "CurveOptions": {
                 "Color": "#008000",
-                "LegendIndex": 2
-              }
-            },
-            {
-              "Name": "Sawe1985_M3G-Morphine-3G-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Sawe1985_M3G|Time",
-              "Y": "Sawe1985_M3G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-3G|Measurement",
-              "CurveOptions": {
-                "Color": "#008000",
-                "LegendIndex": 3,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Sawe1985_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Sawe1985_Morphine|Time",
-              "Y": "Sawe1985_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 4,
-                "LineStyle": "None",
-                "Symbol": "Circle"
+                "LegendIndex": 4
               }
             }
           ],
-          "Name": "Sawe1985_IV_3.55mg",
+          "Name": "Ferslew2015_IV_3.76mg",
           "FontAndSize": {
             "Fonts": {
               "AxisSize": 10,
@@ -3347,8 +2488,522 @@
             "BackColor": "#FFFFFF",
             "DiagramBackColor": "#FFFFFF"
           },
-          "Title": "Sawe1985_IV_3.55mg",
-          "OriginText": "Morphine-model\nSawe1985_IV_3.55mg\n2026-10-14 16:48"
+          "Title": "Ferslew2015_IV_3.76mg",
+          "OriginText": "Morphine-model\nFerslew2015_IV_3.76mg\n2026-10-15 10:24"
+        }
+      ]
+    },
+    {
+      "Name": "Hoskin1989_IV_3.76mg",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Hoskin1989_Morphine_Sub_5",
+        "Hoskin1989_Morphine_Sub_4",
+        "Hoskin1989_Morphine_Sub_3",
+        "Hoskin1989_Morphine_Sub_2",
+        "Hoskin1989_Morphine_Sub_1",
+        "Hoskin1989_Morphine_Sub_0"
+      ],
+      "Solver": {},
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 2.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 300.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 13.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 60.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "Parameters": [
+        {
+          "Path": "CYP3A4|Ontogeny factor GI",
+          "Value": 0.9749109876
+        },
+        {
+          "Path": "Events|Hoskin1989_IV_3.76mg_Morphine|Application_1|ProtocolSchemaItem|Infusion time",
+          "Value": 2.0,
+          "Unit": "min"
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Hoskin1989_Morphine_Sub_5"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Hoskin1989_Morphine_Sub_4"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Hoskin1989_Morphine_Sub_3"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Hoskin1989_Morphine_Sub_2"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Hoskin1989_Morphine_Sub_1"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Hoskin1989_Morphine_Sub_0"
+        }
+      ],
+      "Individual": "Hoskin1989",
+      "Compounds": [
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Hoskin1989_IV_3.76mg_Morphine"
+          }
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "ng/ml",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Solid",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Hoskin1989_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 1
+              }
+            },
+            {
+              "Name": "Hoskin1989_Morphine_Sub_5-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Hoskin1989_Morphine_Sub_5|Time",
+              "Y": "Hoskin1989_Morphine_Sub_5|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 8,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Hoskin1989_Morphine_Sub_4-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Hoskin1989_Morphine_Sub_4|Time",
+              "Y": "Hoskin1989_Morphine_Sub_4|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 9,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Hoskin1989_Morphine_Sub_3-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Hoskin1989_Morphine_Sub_3|Time",
+              "Y": "Hoskin1989_Morphine_Sub_3|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 10,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Hoskin1989_Morphine_Sub_2-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Hoskin1989_Morphine_Sub_2|Time",
+              "Y": "Hoskin1989_Morphine_Sub_2|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 11,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Hoskin1989_Morphine_Sub_1-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Hoskin1989_Morphine_Sub_1|Time",
+              "Y": "Hoskin1989_Morphine_Sub_1|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 12,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Hoskin1989_Morphine_Sub_0-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Hoskin1989_Morphine_Sub_0|Time",
+              "Y": "Hoskin1989_Morphine_Sub_0|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 13,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            }
+          ],
+          "Name": "Hoskin1989_IV_3.76mg",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Hoskin1989_IV_3.76mg",
+          "OriginText": "Morphine-model\nHoskin1989_IV_3.76mg\n2026-10-15 10:23"
+        }
+      ]
+    },
+    {
+      "Name": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Lötsch1998_D_M6G",
+        "Lötsch1998_D_Morphine"
+      ],
+      "Solver": {},
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 300.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 9.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 60.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "Parameters": [
+        {
+          "Path": "CYP3A4|Ontogeny factor GI",
+          "Value": 0.9698140055
+        },
+        {
+          "Path": "Events|Lötsch1998_IVdosageD_Morphine|Application_2|ProtocolSchemaItem|Infusion time",
+          "Value": 4.0,
+          "Unit": "h"
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch1998_D_M6G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch1998_D_Morphine"
+        }
+      ],
+      "Individual": "Lötsch1998",
+      "Compounds": [
+        {
+          "Name": "Morphine-6G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "Renal Clearances-Eissig et al.",
+              "SystemicProcessType": "Renal"
+            },
+            {
+              "Name": "Glomerular Filtration-Eissig et al.",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        },
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-6G"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-3G"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Lötsch1998_IVdosageD_Morphine"
+          }
+        },
+        {
+          "Name": "Morphine-3G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - PK-Sim Standard"
+          ],
+          "Processes": [
+            {
+              "Name": "Glomerular Filtration-Assumption",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "µmol/l",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "Min": 0.0001,
+              "Max": 1.525218,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Solid",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#0000FF",
+                "LegendIndex": 6
+              }
+            },
+            {
+              "Name": "Lötsch1998_D_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Lötsch1998_D_Morphine|Time",
+              "Y": "Lötsch1998_D_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 9,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Lötsch1998_D_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Lötsch1998_D_M6G|Time",
+              "Y": "Lötsch1998_D_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
+              "CurveOptions": {
+                "Color": "#0000FF",
+                "LegendIndex": 8,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 7
+              }
+            }
+          ],
+          "Name": "Lötsch1998_IVdosageD_0.124+0.177g/kg_M6G",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Lötsch1998_IVdosageD_0.124+0.177g/kg_M6G",
+          "OriginText": "Morphine-model\nLötsch1998_IVdosageD_0.124+0.177mg/kg_M6G\n2026-10-15 10:21"
         }
       ]
     },
@@ -3623,7 +3278,446 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Stuart-Harris2000_IV_7.52mg",
-          "OriginText": "Morphine-model\nStuart-Harris2000_IV_7.52mg\n2026-10-14 15:49"
+          "OriginText": "Morphine-model\nStuart-Harris2000_IV_7.52mg\n2026-10-15 10:19"
+        }
+      ]
+    },
+    {
+      "Name": "Westerling1995_IV_7.59mg",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Westerling1995_Morphine",
+        "Westerling1995_M6G"
+      ],
+      "Solver": {},
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 300.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 6.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 60.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "Parameters": [
+        {
+          "Path": "CYP3A4|Ontogeny factor GI",
+          "Value": 0.9737335936
+        },
+        {
+          "Path": "Events|Westerling1995_IV_7.59mg|Application_1|ProtocolSchemaItem|Infusion time",
+          "Value": 20.0,
+          "Unit": "min"
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Westerling1995_M6G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Westerling1995_Morphine"
+        }
+      ],
+      "Individual": "Westerling1995",
+      "Compounds": [
+        {
+          "Name": "Morphine-6G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "Renal Clearances-Eissig et al.",
+              "SystemicProcessType": "Renal"
+            },
+            {
+              "Name": "Glomerular Filtration-Eissig et al.",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        },
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-6G"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-3G"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Westerling1995_IV_7.59mg"
+          }
+        },
+        {
+          "Name": "Morphine-3G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - PK-Sim Standard"
+          ],
+          "Processes": [
+            {
+              "Name": "Glomerular Filtration-Assumption",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "µmol/l",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Solid",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "",
+              "Type": "Y2",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Dash",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#0000FF",
+                "LegendIndex": 8
+              }
+            },
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Westerling1995_IV_7.59mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 7
+              }
+            },
+            {
+              "Name": "Westerling1995_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Westerling1995_Morphine|Time",
+              "Y": "Westerling1995_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 9,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Westerling1995_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Westerling1995_M6G|Time",
+              "Y": "Westerling1995_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
+              "CurveOptions": {
+                "Color": "#0000FF",
+                "LegendIndex": 10,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            }
+          ],
+          "Name": "Westerling1995_IV_7.59mg",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Westerling1995_IV_7.59mg",
+          "OriginText": "Morphine-Model\nWesterling1995_IV_7.59mg\n2026-10-15 10:18"
+        }
+      ]
+    },
+    {
+      "Name": "Lötsch2002_IV_5.64mg",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Lötsch2002_Morphine"
+      ],
+      "Solver": {
+        "AbsTol": 1E-09,
+        "RelTol": 0.0001
+      },
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 300.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 9.5,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 60.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch2002_IV_5.64mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch2002_Morphine"
+        }
+      ],
+      "Individual": "Lötsch2002",
+      "Compounds": [
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Lötsch2002_IV_5.64mg_Morphine"
+          }
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "µmol/l",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "",
+              "Type": "Y2",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Lötsch2002_IV_5.64mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 4
+              }
+            },
+            {
+              "Name": "Lötsch2002_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Lötsch2002_Morphine|Time",
+              "Y": "Lötsch2002_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 5,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            }
+          ],
+          "Name": "Lötsch2002_IV_5.64mg",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#00FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Lötsch2002_IV_5.64mg",
+          "OriginText": "Morphine-model\nLötsch2002_IV_5.64mg\n2026-10-15 10:20"
         }
       ]
     },
@@ -3893,18 +3987,20 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Osborne1990_IV_3.76mg",
-          "OriginText": "Morphine-model\nOsborne1990_IV_3.76mg\n2026-10-14 16:01"
+          "OriginText": "Morphine-model\nOsborne1990_IV_3.76mg\n2026-10-15 10:20"
         }
       ]
     },
     {
-      "Name": "Ferslew2015_IV_3.76mg",
+      "Name": "Lötsch2002_IV_1mg_M6G",
       "Model": "4Comp",
       "ObservedData": [
-        "Ferslew2015_Morphine",
-        "Ferslew2015_M3G"
+        "Lötsch2002_M6G"
       ],
-      "Solver": {},
+      "Solver": {
+        "AbsTol": 1E-09,
+        "RelTol": 0.0001
+      },
       "OutputSchema": [
         {
           "Parameters": [
@@ -3934,7 +4030,7 @@
             },
             {
               "Name": "End time",
-              "Value": 8.0,
+              "Value": 9.5,
               "Unit": "h"
             },
             {
@@ -3945,286 +4041,17 @@
           ]
         }
       ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9820567387
-        },
-        {
-          "Path": "Events|Ferslew2015_IV_3.76mg_Morphine|Application_1|ProtocolSchemaItem|Infusion time",
-          "Value": 5.0,
-          "Unit": "min"
-        }
-      ],
       "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
         "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)"
       ],
       "OutputMappings": [
         {
           "Scaling": "Log",
-          "Path": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Ferslew2015_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Ferslew2015_M3G"
+          "Path": "Lötsch2002_IV_1mg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch2002_M6G"
         }
       ],
-      "Individual": "Ferslew2015",
-      "Compounds": [
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-6G"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-3G"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Ferslew2015_IV_3.76mg_Morphine"
-          }
-        },
-        {
-          "Name": "Morphine-3G",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - PK-Sim Standard"
-          ],
-          "Processes": [
-            {
-              "Name": "Glomerular Filtration-Assumption",
-              "SystemicProcessType": "GFR"
-            }
-          ]
-        },
-        {
-          "Name": "Morphine-6G",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "Renal Clearances-Eissig et al.",
-              "SystemicProcessType": "Renal"
-            },
-            {
-              "Name": "Glomerular Filtration-Eissig et al.",
-              "SystemicProcessType": "GFR"
-            }
-          ]
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "ng/ml",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Solid",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 3
-              }
-            },
-            {
-              "Name": "Ferslew2015_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Ferslew2015_Morphine|Time",
-              "Y": "Ferslew2015_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 9,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Ferslew2015_M3G-Morphine-3G-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Ferslew2015_M3G|Time",
-              "Y": "Ferslew2015_M3G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-3G|Measurement",
-              "CurveOptions": {
-                "Color": "#008000",
-                "LegendIndex": 10,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Morphine-3G-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Ferslew2015_IV_3.76mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#008000",
-                "LegendIndex": 4
-              }
-            }
-          ],
-          "Name": "Ferslew2015_IV_3.76mg",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Ferslew2015_IV_3.76mg",
-          "OriginText": "Morphine-Model\nFerslew2018_IV_3.76mg\n2026-10-14 09:57"
-        }
-      ]
-    },
-    {
-      "Name": "Lötsch1998_IVdosageE_A+D_M6G",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Lötsch1998_E_M6G",
-        "Lötsch1998_E_Morphine"
-      ],
-      "Solver": {},
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 9.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9698140055
-        },
-        {
-          "Path": "Events|Lötsch1998_IVdosageA_M6G|Application_2|ProtocolSchemaItem|Infusion time",
-          "Value": 4.0,
-          "Unit": "h"
-        },
-        {
-          "Path": "Events|Lötsch1998_IVdosageD_Morphine|Application_2|ProtocolSchemaItem|Infusion time",
-          "Value": 4.0,
-          "Unit": "h"
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Lötsch1998_E_M6G"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Lötsch1998_E_Morphine"
-        }
-      ],
-      "Individual": "Lötsch1998",
+      "Individual": "Lötsch2002",
       "Compounds": [
         {
           "Name": "Morphine-6G",
@@ -4249,61 +4076,8 @@
             }
           ],
           "Protocol": {
-            "Name": "Lötsch1998_IVdosageA_M6G"
+            "Name": "Lötsch2002_IV_1mg_M6G"
           }
-        },
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-6G"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-3G"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Lötsch1998_IVdosageD_Morphine"
-          }
-        },
-        {
-          "Name": "Morphine-3G",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - PK-Sim Standard",
-            "Cellular permeability - PK-Sim Standard"
-          ],
-          "Processes": [
-            {
-              "Name": "Glomerular Filtration-Assumption",
-              "SystemicProcessType": "GFR"
-            }
-          ]
         }
       ],
       "HasResults": true,
@@ -4337,45 +4111,25 @@
             {
               "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
               "X": "Time",
-              "Y": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+              "Y": "Lötsch2002_IV_1mg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
               "CurveOptions": {
                 "Color": "#0000FF",
-                "LegendIndex": 6
+                "LegendIndex": 1
               }
             },
             {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 5
-              }
-            },
-            {
-              "Name": "Lötsch1998_E_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Lötsch1998_E_Morphine|Time",
-              "Y": "Lötsch1998_E_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 7,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Lötsch1998_E_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Lötsch1998_E_M6G|Time",
-              "Y": "Lötsch1998_E_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
+              "Name": "Lötsch2002_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Lötsch2002_M6G|Time",
+              "Y": "Lötsch2002_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
               "CurveOptions": {
                 "Color": "#0000FF",
-                "LegendIndex": 8,
+                "LegendIndex": 2,
                 "LineStyle": "None",
                 "Symbol": "Circle"
               }
             }
           ],
-          "Name": "Lötsch1998_IVdosageE_A+D_M6G",
+          "Name": "Lötsch2002_IV_1mg_M6G",
           "FontAndSize": {
             "Fonts": {
               "AxisSize": 10,
@@ -4393,242 +4147,8 @@
             "BackColor": "#FFFFFF",
             "DiagramBackColor": "#FFFFFF"
           },
-          "Title": "Lötsch1998_IVdosageE_A+D_M6G",
-          "OriginText": "Morphine-model\nLötsch1998_IVdosageE_A+D_M6G\n2026-10-14 16:51"
-        }
-      ]
-    },
-    {
-      "Name": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
-      "Model": "4Comp",
-      "ObservedData": [
-        "Lötsch1998_D_M6G",
-        "Lötsch1998_D_Morphine"
-      ],
-      "Solver": {},
-      "OutputSchema": [
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 300.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 0.35,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
-              "Value": 9.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 60.0,
-              "Unit": "pts/h"
-            }
-          ]
-        }
-      ],
-      "Parameters": [
-        {
-          "Path": "CYP3A4|Ontogeny factor GI",
-          "Value": 0.9698140055
-        },
-        {
-          "Path": "Events|Lötsch1998_IVdosageD_Morphine|Application_2|ProtocolSchemaItem|Infusion time",
-          "Value": 4.0,
-          "Unit": "h"
-        }
-      ],
-      "OutputSelections": [
-        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)"
-      ],
-      "OutputMappings": [
-        {
-          "Scaling": "Log",
-          "Path": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Lötsch1998_D_Morphine"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Lötsch1998_D_M6G"
-        }
-      ],
-      "Individual": "Lötsch1998",
-      "Compounds": [
-        {
-          "Name": "Morphine-6G",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "Renal Clearances-Eissig et al.",
-              "SystemicProcessType": "Renal"
-            },
-            {
-              "Name": "Glomerular Filtration-Eissig et al.",
-              "SystemicProcessType": "GFR"
-            }
-          ]
-        },
-        {
-          "Name": "Morphine",
-          "CalculationMethods": [
-            "Cellular partition coefficient method - Rodgers and Rowland",
-            "Cellular permeability - Charge dependent Schmitt"
-          ],
-          "Alternatives": [
-            {
-              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
-              "GroupName": "COMPOUND_LIPOPHILICITY"
-            },
-            {
-              "AlternativeName": "new",
-              "GroupName": "COMPOUND_PERMEABILITY"
-            }
-          ],
-          "Processes": [
-            {
-              "Name": "CYP3A4-PI",
-              "MoleculeName": "CYP3A4"
-            },
-            {
-              "Name": "UGT2B7_M6G-PI",
-              "MoleculeName": "UGT2B7",
-              "MetaboliteName": "Morphine-6G"
-            },
-            {
-              "Name": "UGT2B7_M3G-PI",
-              "MoleculeName": "UGT2B7"
-            },
-            {
-              "Name": "Glomerular Filtration-M_GFR",
-              "SystemicProcessType": "GFR"
-            }
-          ],
-          "Protocol": {
-            "Name": "Lötsch1998_IVdosageD_Morphine"
-          }
-        }
-      ],
-      "HasResults": true,
-      "IndividualAnalyses": [
-        {
-          "Axes": [
-            {
-              "Unit": "h",
-              "Dimension": "Time",
-              "Type": "X",
-              "GridLines": false,
-              "Visible": true,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "None",
-              "Scaling": "Linear",
-              "NumberMode": "Normal"
-            },
-            {
-              "Unit": "µmol/l",
-              "Dimension": "Concentration (molar)",
-              "Type": "Y",
-              "GridLines": false,
-              "Visible": true,
-              "Min": 0.0001,
-              "Max": 1.525218,
-              "DefaultColor": "#FFFFFF",
-              "DefaultLineStyle": "Solid",
-              "Scaling": "Log",
-              "NumberMode": "Normal"
-            }
-          ],
-          "Curves": [
-            {
-              "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#0000FF",
-                "LegendIndex": 6
-              }
-            },
-            {
-              "Name": "Lötsch1998_D_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Lötsch1998_D_Morphine|Time",
-              "Y": "Lötsch1998_D_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 9,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Lötsch1998_D_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
-              "X": "Lötsch1998_D_M6G|Time",
-              "Y": "Lötsch1998_D_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
-              "CurveOptions": {
-                "Color": "#0000FF",
-                "LegendIndex": 8,
-                "LineStyle": "None",
-                "Symbol": "Circle"
-              }
-            },
-            {
-              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
-              "X": "Time",
-              "Y": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-              "CurveOptions": {
-                "Color": "#FF0000",
-                "LegendIndex": 7
-              }
-            }
-          ],
-          "Name": "Lötsch1998_IVdosageD_0.124+0.177g/kg_M6G",
-          "FontAndSize": {
-            "Fonts": {
-              "AxisSize": 10,
-              "LegendSize": 8,
-              "TitleSize": 16,
-              "DescriptionSize": 12,
-              "OriginSize": 8,
-              "FontFamilyName": "Microsoft Sans Serif",
-              "WatermarkSize": 32
-            }
-          },
-          "Settings": {
-            "SideMarginsEnabled": true,
-            "LegendPosition": "Bottom",
-            "BackColor": "#FFFFFF",
-            "DiagramBackColor": "#FFFFFF"
-          },
-          "Title": "Lötsch1998_IVdosageD_0.124+0.177g/kg_M6G",
-          "OriginText": "Morphine-model\nLötsch1998_IVdosageD_0.124+0.177mg/kg_M6G\n2026-10-14 16:31"
+          "Title": "Lötsch2002_IV_1mg_M6G",
+          "OriginText": "Morphine-model\nLötsch2002_IV_1mg_M6G\n2026-10-15 10:21"
         }
       ]
     },
@@ -4703,8 +4223,8 @@
       "OutputMappings": [
         {
           "Scaling": "Log",
-          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Crews2001_Morphine"
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_M3G"
         },
         {
           "Scaling": "Log",
@@ -4713,8 +4233,8 @@
         },
         {
           "Scaling": "Log",
-          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Crews2001_M3G"
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_Morphine"
         }
       ],
       "Individual": "Crews2001",
@@ -4821,6 +4341,16 @@
               "DefaultLineStyle": "Solid",
               "Scaling": "Log",
               "NumberMode": "Normal"
+            },
+            {
+              "Unit": "",
+              "Type": "Y2",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Dash",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
             }
           ],
           "Curves": [
@@ -4839,7 +4369,7 @@
               "Y": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
               "CurveOptions": {
                 "Color": "#008000",
-                "LegendIndex": 2
+                "LegendIndex": 8
               }
             },
             {
@@ -4881,7 +4411,7 @@
               "Y": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
               "CurveOptions": {
                 "Color": "#0000FF",
-                "LegendIndex": 3
+                "LegendIndex": 9
               }
             }
           ],
@@ -4904,7 +4434,511 @@
             "DiagramBackColor": "#FFFFFF"
           },
           "Title": "Crews2001_IV_7.52mg",
-          "OriginText": "Morphine-model\nCrews2001_IV_7.52mg\n2026-10-14 16:48"
+          "OriginText": "Morphine-Model\nCrews2001_IV_7.52mg\n2026-10-15 17:05"
+        }
+      ]
+    },
+    {
+      "Name": "Sawe1985_IV_3.55mg",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Sawe1985_M3G",
+        "Sawe1985_Morphine"
+      ],
+      "Solver": {},
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 2.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 20.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 2.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 12.0,
+              "Unit": "h",
+              "ValueOrigin": {
+                "Source": "Unknown"
+              }
+            },
+            {
+              "Name": "Resolution",
+              "Value": 4.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "Parameters": [
+        {
+          "Path": "CYP3A4|Ontogeny factor GI",
+          "Value": 0.9925855004
+        },
+        {
+          "Path": "Events|Sawe1985_IV_3.55mg|Application_1|ProtocolSchemaItem|Infusion time",
+          "Value": 2.0,
+          "Unit": "min"
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Sawe1985_M3G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Sawe1985_Morphine"
+        }
+      ],
+      "Individual": "Sawe1985",
+      "Compounds": [
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-3G"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-6G"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Sawe1985_IV_3.55mg"
+          }
+        },
+        {
+          "Name": "Morphine-3G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - PK-Sim Standard"
+          ],
+          "Processes": [
+            {
+              "Name": "Glomerular Filtration-Assumption",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        },
+        {
+          "Name": "Morphine-6G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "Renal Clearances-Eissig et al.",
+              "SystemicProcessType": "Renal"
+            },
+            {
+              "Name": "Glomerular Filtration-Eissig et al.",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "µmol/l",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Solid",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 1
+              }
+            },
+            {
+              "Name": "Morphine-3G-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#008000",
+                "LegendIndex": 2
+              }
+            },
+            {
+              "Name": "Sawe1985_M3G-Morphine-3G-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Sawe1985_M3G|Time",
+              "Y": "Sawe1985_M3G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-3G|Measurement",
+              "CurveOptions": {
+                "Color": "#008000",
+                "LegendIndex": 3,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Sawe1985_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Sawe1985_Morphine|Time",
+              "Y": "Sawe1985_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 4,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            }
+          ],
+          "Name": "Sawe1985_IV_3.55mg",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Sawe1985_IV_3.55mg",
+          "OriginText": "Morphine-Model\nSawe1985_IV_3.55mg\n2026-10-15 20:29"
+        }
+      ]
+    },
+    {
+      "Name": "Lötsch1998_IVdosageE_A+D_M6G",
+      "Model": "4Comp",
+      "ObservedData": [
+        "Lötsch1998_E_M6G",
+        "Lötsch1998_E_Morphine"
+      ],
+      "Solver": {},
+      "OutputSchema": [
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 300.0,
+              "Unit": "pts/h"
+            }
+          ]
+        },
+        {
+          "Parameters": [
+            {
+              "Name": "Start time",
+              "Value": 0.35,
+              "Unit": "h"
+            },
+            {
+              "Name": "End time",
+              "Value": 9.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "Resolution",
+              "Value": 60.0,
+              "Unit": "pts/h"
+            }
+          ]
+        }
+      ],
+      "Parameters": [
+        {
+          "Path": "CYP3A4|Ontogeny factor GI",
+          "Value": 0.9698140055
+        },
+        {
+          "Path": "Events|Lötsch1998_IVdosageA_M6G|Application_2|ProtocolSchemaItem|Infusion time",
+          "Value": 4.0,
+          "Unit": "h"
+        },
+        {
+          "Path": "Events|Lötsch1998_IVdosageD_Morphine|Application_2|ProtocolSchemaItem|Infusion time",
+          "Value": 4.0,
+          "Unit": "h"
+        }
+      ],
+      "OutputSelections": [
+        "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+        "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+        "Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch1998_E_M6G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Lötsch1998_E_Morphine"
+        }
+      ],
+      "Individual": "Lötsch1998",
+      "Compounds": [
+        {
+          "Name": "Morphine-6G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "Renal Clearances-Eissig et al.",
+              "SystemicProcessType": "Renal"
+            },
+            {
+              "Name": "Glomerular Filtration-Eissig et al.",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Lötsch1998_IVdosageA_M6G"
+          }
+        },
+        {
+          "Name": "Morphine",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - Charge dependent Schmitt"
+          ],
+          "Alternatives": [
+            {
+              "AlternativeName": "Moderne Pharmakokinetik Transport durch Membranen",
+              "GroupName": "COMPOUND_LIPOPHILICITY"
+            },
+            {
+              "AlternativeName": "new",
+              "GroupName": "COMPOUND_PERMEABILITY"
+            }
+          ],
+          "Processes": [
+            {
+              "Name": "CYP3A4-PI",
+              "MoleculeName": "CYP3A4"
+            },
+            {
+              "Name": "UGT2B7_M6G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-6G"
+            },
+            {
+              "Name": "UGT2B7_M3G-PI",
+              "MoleculeName": "UGT2B7",
+              "MetaboliteName": "Morphine-3G"
+            },
+            {
+              "Name": "Glomerular Filtration-M_GFR",
+              "SystemicProcessType": "GFR"
+            }
+          ],
+          "Protocol": {
+            "Name": "Lötsch1998_IVdosageD_Morphine"
+          }
+        },
+        {
+          "Name": "Morphine-3G",
+          "CalculationMethods": [
+            "Cellular partition coefficient method - Rodgers and Rowland",
+            "Cellular permeability - PK-Sim Standard"
+          ],
+          "Processes": [
+            {
+              "Name": "Glomerular Filtration-Assumption",
+              "SystemicProcessType": "GFR"
+            }
+          ]
+        }
+      ],
+      "HasResults": true,
+      "IndividualAnalyses": [
+        {
+          "Axes": [
+            {
+              "Unit": "h",
+              "Dimension": "Time",
+              "Type": "X",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "None",
+              "Scaling": "Linear",
+              "NumberMode": "Normal"
+            },
+            {
+              "Unit": "µmol/l",
+              "Dimension": "Concentration (molar)",
+              "Type": "Y",
+              "GridLines": false,
+              "Visible": true,
+              "DefaultColor": "#FFFFFF",
+              "DefaultLineStyle": "Solid",
+              "Scaling": "Log",
+              "NumberMode": "Normal"
+            }
+          ],
+          "Curves": [
+            {
+              "Name": "Morphine-6G-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#0000FF",
+                "LegendIndex": 6
+              }
+            },
+            {
+              "Name": "Morphine-Peripheral Venous Blood-Plasma-Concentration",
+              "X": "Time",
+              "Y": "Lötsch1998_IVdosageE_A+D_M6G|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 5
+              }
+            },
+            {
+              "Name": "Lötsch1998_E_Morphine-Morphine-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Lötsch1998_E_Morphine|Time",
+              "Y": "Lötsch1998_E_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement",
+              "CurveOptions": {
+                "Color": "#FF0000",
+                "LegendIndex": 7,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            },
+            {
+              "Name": "Lötsch1998_E_M6G-Morphine-6G-Peripheral Venous Blood-Plasma-Measurement",
+              "X": "Lötsch1998_E_M6G|Time",
+              "Y": "Lötsch1998_E_M6G|ObservedData|Peripheral Venous Blood|Plasma|Morphine-6G|Measurement",
+              "CurveOptions": {
+                "Color": "#0000FF",
+                "LegendIndex": 8,
+                "LineStyle": "None",
+                "Symbol": "Circle"
+              }
+            }
+          ],
+          "Name": "Lötsch1998_IVdosageE_A+D_M6G",
+          "FontAndSize": {
+            "Fonts": {
+              "AxisSize": 10,
+              "LegendSize": 8,
+              "TitleSize": 16,
+              "DescriptionSize": 12,
+              "OriginSize": 8,
+              "FontFamilyName": "Microsoft Sans Serif",
+              "WatermarkSize": 32
+            }
+          },
+          "Settings": {
+            "SideMarginsEnabled": true,
+            "LegendPosition": "Bottom",
+            "BackColor": "#FFFFFF",
+            "DiagramBackColor": "#FFFFFF"
+          },
+          "Title": "Lötsch1998_IVdosageE_A+D_M6G",
+          "OriginText": "Morphine-Model\nLötsch1998_IVdosageE_A+D_M6G\n2026-10-15 20:33"
         }
       ]
     }
@@ -4913,8 +4947,8 @@
     {
       "Name": "Parameter Identification 1",
       "Simulations": [
-        "Sawe1985_IV_3.55mg",
-        "Crews2001_IV_7.52mg"
+        "Crews2001_IV_7.52mg",
+        "Sawe1985_IV_3.55mg"
       ],
       "Configuration": {
         "LLOQMode": "SimulationOutputAsObservedDataLLOQ",
@@ -4980,16 +5014,6 @@
       "OutputMappings": [
         {
           "Scaling": "Log",
-          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Crews2001_M3G"
-        },
-        {
-          "Scaling": "Log",
-          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Crews2001_M6G"
-        },
-        {
-          "Scaling": "Log",
           "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
           "ObservedData": "Crews2001_Morphine"
         },
@@ -5002,20 +5026,30 @@
           "Scaling": "Log",
           "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
           "ObservedData": "Sawe1985_Morphine"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_M6G"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_M3G"
         }
       ],
       "IdentificationParameters": [
         {
-          "Name": "Intrinsic clearance UGT2B7 m6G",
+          "Name": "Intrinsic clearance",
           "Scaling": "Linear",
           "LinkedParameters": [
-            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance",
-            "Crews2001_IV_7.52mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance"
+            "Crews2001_IV_7.52mg|Morphine-CYP3A4-PI|Intrinsic clearance",
+            "Sawe1985_IV_3.55mg|Morphine-CYP3A4-PI|Intrinsic clearance"
           ],
           "Parameters": [
             {
               "Name": "Start value",
-              "Value": 1.43546359,
+              "Value": 1.0623151828,
               "Unit": "l/min"
             },
             {
@@ -5025,22 +5059,22 @@
             },
             {
               "Name": "MaxValue",
-              "Value": 14.3546359,
+              "Value": 10.623151828,
               "Unit": "l/min"
             }
           ]
         },
         {
-          "Name": "Intrinsic clearance cyp3a4",
+          "Name": "Intrinsic clearance 1",
           "Scaling": "Linear",
           "LinkedParameters": [
-            "Sawe1985_IV_3.55mg|Morphine-CYP3A4-PI|Intrinsic clearance",
-            "Crews2001_IV_7.52mg|Morphine-CYP3A4-PI|Intrinsic clearance"
+            "Crews2001_IV_7.52mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance",
+            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance"
           ],
           "Parameters": [
             {
               "Name": "Start value",
-              "Value": 3.6244516,
+              "Value": 2.6973905003,
               "Unit": "l/min"
             },
             {
@@ -5050,22 +5084,22 @@
             },
             {
               "Name": "MaxValue",
-              "Value": 4.62,
+              "Value": 26.973905003,
               "Unit": "l/min"
             }
           ]
         },
         {
-          "Name": "Intrinsic clearance UGT2B7 m3G",
+          "Name": "Intrinsic clearance 2",
           "Scaling": "Linear",
           "LinkedParameters": [
-            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance",
-            "Crews2001_IV_7.52mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance"
+            "Crews2001_IV_7.52mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance",
+            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance"
           ],
           "Parameters": [
             {
               "Name": "Start value",
-              "Value": 10.0,
+              "Value": 0.7069885748,
               "Unit": "l/min"
             },
             {
@@ -5075,7 +5109,7 @@
             },
             {
               "Name": "MaxValue",
-              "Value": 10.0,
+              "Value": 7.069885748,
               "Unit": "l/min"
             }
           ]
@@ -5085,13 +5119,13 @@
     {
       "Name": "Parameter Identification 2",
       "Simulations": [
-        "Sawe1985_IV_3.55mg",
-        "Crews2001_IV_7.52mg"
+        "Crews2001_IV_7.52mg",
+        "Sawe1985_IV_3.55mg"
       ],
       "Configuration": {
         "LLOQMode": "SimulationOutputAsObservedDataLLOQ",
         "RemoveLLOQMode": "Never",
-        "CalculateJacobian": false,
+        "CalculateJacobian": true,
         "Algorithm": {
           "Name": "Levenberg - Marquardt (MPFit)",
           "Properties": [
@@ -5136,6 +5170,26 @@
       "OutputMappings": [
         {
           "Scaling": "Log",
+          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Crews2001_Morphine",
+          "Weights": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "Scaling": "Log",
           "Path": "Sawe1985_IV_3.55mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
           "ObservedData": "Sawe1985_M3G"
         },
@@ -5146,90 +5200,82 @@
         },
         {
           "Scaling": "Log",
-          "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Crews2001_M3G"
-        },
-        {
-          "Scaling": "Log",
           "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
           "ObservedData": "Crews2001_M6G"
         },
         {
           "Scaling": "Log",
           "Path": "Crews2001_IV_7.52mg|Organism|PeripheralVenousBlood|Morphine-3G|Plasma (Peripheral Venous Blood)",
-          "ObservedData": "Crews2001_Morphine"
+          "ObservedData": "Crews2001_M3G"
         }
       ],
       "IdentificationParameters": [
         {
           "Name": "Intrinsic clearance",
           "Scaling": "Linear",
+          "UseAsFactor": true,
           "LinkedParameters": [
-            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance"
+            "Sawe1985_IV_3.55mg|Morphine-CYP3A4-PI|Intrinsic clearance",
+            "Crews2001_IV_7.52mg|Morphine-CYP3A4-PI|Intrinsic clearance"
           ],
           "Parameters": [
             {
               "Name": "Start value",
-              "Value": 0.3392377834,
-              "Unit": "l/min"
+              "Value": 1.0
             },
             {
               "Name": "MinValue",
-              "Value": 0.0,
-              "Unit": "l/min"
+              "Value": 0.1
             },
             {
               "Name": "MaxValue",
-              "Value": 3.3923778342,
-              "Unit": "l/min"
+              "Value": 10.0
             }
           ]
         },
         {
           "Name": "Intrinsic clearance 1",
           "Scaling": "Linear",
+          "UseAsFactor": true,
           "LinkedParameters": [
-            "Sawe1985_IV_3.55mg|Morphine-CYP3A4-PI|Intrinsic clearance"
+            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance",
+            "Crews2001_IV_7.52mg|Morphine-UGT2B7_M3G-PI|Intrinsic clearance"
           ],
           "Parameters": [
             {
               "Name": "Start value",
-              "Value": 0.1062315183,
-              "Unit": "l/min"
+              "Value": 1.0
             },
             {
               "Name": "MinValue",
-              "Value": 0.0,
-              "Unit": "l/min"
+              "Value": 0.1
             },
             {
               "Name": "MaxValue",
-              "Value": 1.0623151828,
-              "Unit": "l/min"
+              "Value": 10.0
             }
           ]
         },
         {
           "Name": "Intrinsic clearance 2",
           "Scaling": "Linear",
+          "UseAsFactor": true,
           "LinkedParameters": [
-            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance"
+            "Sawe1985_IV_3.55mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance",
+            "Crews2001_IV_7.52mg|Morphine-UGT2B7_M6G-PI|Intrinsic clearance"
           ],
           "Parameters": [
             {
               "Name": "Start value",
-              "Value": 0.0706988575,
-              "Unit": "l/min"
+              "Value": 1.0
             },
             {
               "Name": "MinValue",
-              "Value": 0.0,
-              "Unit": "l/min"
+              "Value": 0.1
             },
             {
               "Name": "MaxValue",
-              "Value": 0.7069885748,
-              "Unit": "l/min"
+              "Value": 10.0
             }
           ]
         }
@@ -5645,158 +5691,6 @@
           5.97849035,
           6.96774,
           8.0
-        ],
-        "Dimension": "Time",
-        "Unit": "h"
-      }
-    },
-    {
-      "Name": "Hoskin1989_Sub1_Morphine",
-      "ExtendedProperties": [
-        {
-          "Name": "Sheet",
-          "Value": "Hoskin1989_Sub1_Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Molecule",
-          "Value": "Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Organ",
-          "Value": "Peripheral Venous Blood",
-          "Type": "String"
-        },
-        {
-          "Name": "Compartment",
-          "Value": "Plasma",
-          "Type": "String"
-        }
-      ],
-      "Columns": [
-        {
-          "Name": "Measurement",
-          "QuantityInfo": {
-            "Path": "Hoskin1989_Sub1_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
-          },
-          "DataInfo": {
-            "Origin": "Observation",
-            "AuxiliaryType": "Undefined",
-            "MolWeight": 285.33766
-          },
-          "Values": [
-            0.02992973,
-            0.01125563,
-            0.01227886,
-            0.01074399,
-            0.007930083,
-            0.007674283,
-            0.007162683,
-            0.005372012,
-            0.003325524,
-            0.002046478,
-            0.001534857,
-            0.00127905
-          ],
-          "Dimension": "Concentration (molar)",
-          "Unit": "µmol/l"
-        }
-      ],
-      "BaseGrid": {
-        "Name": "Time",
-        "QuantityInfo": {
-          "Path": "Hoskin1989_Sub1_Morphine|Time",
-          "Type": "Time"
-        },
-        "DataInfo": {
-          "Origin": "BaseGrid",
-          "AuxiliaryType": "Undefined"
-        },
-        "Values": [
-          1.00656,
-          1.46084,
-          1.97229,
-          2.37461,
-          2.97662,
-          3.48435,
-          3.99134,
-          5.00309,
-          6.0141,
-          7.9426,
-          9.97501,
-          12.1098995
-        ],
-        "Dimension": "Time",
-        "Unit": "h"
-      }
-    },
-    {
-      "Name": "Hoskin1989_Sub2_Morphine",
-      "ExtendedProperties": [
-        {
-          "Name": "Sheet",
-          "Value": "Hoskin1989_Sub2_Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Molecule",
-          "Value": "Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Organ",
-          "Value": "Peripheral Venous Blood",
-          "Type": "String"
-        },
-        {
-          "Name": "Compartment",
-          "Value": "Plasma",
-          "Type": "String"
-        }
-      ],
-      "Columns": [
-        {
-          "Name": "Measurement",
-          "QuantityInfo": {
-            "Path": "Hoskin1989_Sub2_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
-          },
-          "DataInfo": {
-            "Origin": "Observation",
-            "AuxiliaryType": "Undefined",
-            "MolWeight": 285.33766
-          },
-          "Values": [
-            0.01496485,
-            0.009848672,
-            0.006395247,
-            0.004476659,
-            0.001406953,
-            0.0006395248,
-            0.0
-          ],
-          "Dimension": "Concentration (molar)",
-          "Unit": "µmol/l"
-        }
-      ],
-      "BaseGrid": {
-        "Name": "Time",
-        "QuantityInfo": {
-          "Path": "Hoskin1989_Sub2_Morphine|Time",
-          "Type": "Time"
-        },
-        "DataInfo": {
-          "Origin": "BaseGrid",
-          "AuxiliaryType": "Undefined"
-        },
-        "Values": [
-          3.48978,
-          3.96057987,
-          4.94088,
-          6.02993,
-          7.91241,
-          10.0079994,
-          12.0043993
         ],
         "Dimension": "Time",
         "Unit": "h"
@@ -6803,93 +6697,6 @@
       }
     },
     {
-      "Name": "Hoskin1989_Sub3_Morphine",
-      "ExtendedProperties": [
-        {
-          "Name": "Sheet",
-          "Value": "Hoskin1989_Sub3_Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Molecule",
-          "Value": "Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Organ",
-          "Value": "Peripheral Venous Blood",
-          "Type": "String"
-        },
-        {
-          "Name": "Compartment",
-          "Value": "Plasma",
-          "Type": "String"
-        }
-      ],
-      "Columns": [
-        {
-          "Name": "Measurement",
-          "QuantityInfo": {
-            "Path": "Hoskin1989_Sub3_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
-          },
-          "DataInfo": {
-            "Origin": "Observation",
-            "AuxiliaryType": "Undefined",
-            "MolWeight": 285.33766
-          },
-          "Values": [
-            0.05985947,
-            0.04195276,
-            0.02302285,
-            0.01739504,
-            0.0163718,
-            0.0133021,
-            0.009720755,
-            0.009209154,
-            0.006139413,
-            0.005116177,
-            0.004092942,
-            0.002558096,
-            0.001534857,
-            0.0005116177,
-            0.0
-          ],
-          "Dimension": "Concentration (molar)",
-          "Unit": "µmol/l"
-        }
-      ],
-      "BaseGrid": {
-        "Name": "Time",
-        "QuantityInfo": {
-          "Path": "Hoskin1989_Sub3_Morphine|Time",
-          "Type": "Time"
-        },
-        "DataInfo": {
-          "Origin": "BaseGrid",
-          "AuxiliaryType": "Undefined"
-        },
-        "Values": [
-          0.0,
-          0.101694994,
-          0.7118641,
-          0.915254,
-          1.42373,
-          1.9322,
-          2.44068,
-          2.94915,
-          3.45763,
-          3.9661,
-          4.98305,
-          6.0,
-          8.0339,
-          9.9661,
-          12.0
-        ],
-        "Dimension": "Time",
-        "Unit": "h"
-      }
-    },
-    {
       "Name": "Lötsch1998_C_M6G",
       "ExtendedProperties": [
         {
@@ -7012,253 +6819,6 @@
           5.97849035,
           6.96774,
           8.04301
-        ],
-        "Dimension": "Time",
-        "Unit": "h"
-      }
-    },
-    {
-      "Name": "Hoskin1989_Sub5_Morphine",
-      "ExtendedProperties": [
-        {
-          "Name": "Sheet",
-          "Value": "Hoskin1989_Sub5_Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Molecule",
-          "Value": "Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Organ",
-          "Value": "Peripheral Venous Blood",
-          "Type": "String"
-        },
-        {
-          "Name": "Compartment",
-          "Value": "Plasma",
-          "Type": "String"
-        }
-      ],
-      "Columns": [
-        {
-          "Name": "Measurement",
-          "QuantityInfo": {
-            "Path": "Hoskin1989_Sub5_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
-          },
-          "DataInfo": {
-            "Origin": "Observation",
-            "AuxiliaryType": "Undefined",
-            "MolWeight": 285.33766
-          },
-          "Values": [
-            0.02132806,
-            0.0191698,
-            0.01286928,
-            0.01036241,
-            0.01019724,
-            0.008586108,
-            0.006977991,
-            0.005730637,
-            0.003776968,
-            0.002181005,
-            -0.0001030634,
-            -0.0002227991,
-            -0.0003425345
-          ],
-          "Dimension": "Concentration (molar)",
-          "Unit": "µmol/l"
-        }
-      ],
-      "BaseGrid": {
-        "Name": "Time",
-        "QuantityInfo": {
-          "Path": "Hoskin1989_Sub5_Morphine|Time",
-          "Type": "Time"
-        },
-        "DataInfo": {
-          "Origin": "BaseGrid",
-          "AuxiliaryType": "Undefined"
-        },
-        "Values": [
-          0.81552,
-          1.02607,
-          1.45533,
-          2.07068,
-          2.57556,
-          2.98554,
-          3.49635,
-          4.00568,
-          5.02212,
-          5.93624,
-          7.96244,
-          9.97974,
-          11.997
-        ],
-        "Dimension": "Time",
-        "Unit": "h"
-      }
-    },
-    {
-      "Name": "Hoskin1989_Sub4_Morphine",
-      "ExtendedProperties": [
-        {
-          "Name": "Sheet",
-          "Value": "Hoskin1989_Sub4_Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Molecule",
-          "Value": "Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Organ",
-          "Value": "Peripheral Venous Blood",
-          "Type": "String"
-        },
-        {
-          "Name": "Compartment",
-          "Value": "Plasma",
-          "Type": "String"
-        }
-      ],
-      "Columns": [
-        {
-          "Name": "Measurement",
-          "QuantityInfo": {
-            "Path": "Hoskin1989_Sub4_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
-          },
-          "DataInfo": {
-            "Origin": "Observation",
-            "AuxiliaryType": "Undefined",
-            "MolWeight": 285.33766
-          },
-          "Values": [
-            0.01549131,
-            0.01345966,
-            0.01142802,
-            0.00901542,
-            0.008253558,
-            0.007491694,
-            0.004952127,
-            0.002285603,
-            0.0,
-            0.0,
-            0.0
-          ],
-          "Dimension": "Concentration (molar)",
-          "Unit": "µmol/l"
-        }
-      ],
-      "BaseGrid": {
-        "Name": "Time",
-        "QuantityInfo": {
-          "Path": "Hoskin1989_Sub4_Morphine|Time",
-          "Type": "Time"
-        },
-        "DataInfo": {
-          "Origin": "BaseGrid",
-          "AuxiliaryType": "Undefined"
-        },
-        "Values": [
-          1.40724993,
-          1.91884,
-          2.43043017,
-          2.8442,
-          3.44855,
-          3.9529,
-          4.96739,
-          5.98261,
-          7.99565029,
-          9.99565,
-          11.9957
-        ],
-        "Dimension": "Time",
-        "Unit": "h"
-      }
-    },
-    {
-      "Name": "Hoskin1989_Sub6_Morphine",
-      "ExtendedProperties": [
-        {
-          "Name": "Sheet",
-          "Value": "Hoskin1989_Sub6_Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Molecule",
-          "Value": "Morphine",
-          "Type": "String"
-        },
-        {
-          "Name": "Organ",
-          "Value": "Peripheral Venous Blood",
-          "Type": "String"
-        },
-        {
-          "Name": "Compartment",
-          "Value": "Plasma",
-          "Type": "String"
-        }
-      ],
-      "Columns": [
-        {
-          "Name": "Measurement",
-          "QuantityInfo": {
-            "Path": "Hoskin1989_Sub6_Morphine|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
-          },
-          "DataInfo": {
-            "Origin": "Observation",
-            "AuxiliaryType": "Undefined",
-            "MolWeight": 285.33766
-          },
-          "Values": [
-            0.03171974,
-            0.02270709,
-            0.02013451,
-            0.01293001,
-            0.01010405,
-            0.01243629,
-            0.008581727,
-            0.007561821,
-            0.006284187,
-            0.004242131,
-            0.001944589,
-            -7.362584E-05,
-            -0.0002901724,
-            -0.0005023867
-          ],
-          "Dimension": "Concentration (molar)",
-          "Unit": "µmol/l"
-        }
-      ],
-      "BaseGrid": {
-        "Name": "Time",
-        "QuantityInfo": {
-          "Path": "Hoskin1989_Sub6_Morphine|Time",
-          "Type": "Time"
-        },
-        "DataInfo": {
-          "Origin": "BaseGrid",
-          "AuxiliaryType": "Undefined"
-        },
-        "Values": [
-          0.60504204,
-          0.907563031,
-          1.10923994,
-          1.61344993,
-          2.01681,
-          2.62185,
-          3.12605,
-          3.63025,
-          4.13445,
-          5.04202032,
-          6.05042028,
-          8.06723,
-          9.98319,
-          12.1008
         ],
         "Dimension": "Time",
         "Unit": "h"
@@ -8856,6 +8416,828 @@
           8.0,
           10.0,
           12.0
+        ],
+        "Dimension": "Time",
+        "Unit": "h"
+      }
+    },
+    {
+      "Name": "Hoskin1989_Morphine_Sub_0",
+      "ExtendedProperties": [
+        {
+          "Name": "Sheet",
+          "Value": "IV_morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Study Id",
+          "Value": "Hoskin 1989",
+          "Type": "String"
+        },
+        {
+          "Name": "Subject Id",
+          "Value": "Subject 1",
+          "Type": "String"
+        },
+        {
+          "Name": "Organ",
+          "Value": "Peripheral Venous Blood",
+          "Type": "String"
+        },
+        {
+          "Name": "Compartment",
+          "Value": "Plasma",
+          "Type": "String"
+        },
+        {
+          "Name": "Species",
+          "Value": "Human",
+          "Type": "String"
+        },
+        {
+          "Name": "Dose",
+          "Value": "5 mg morphine sulphate IV (2 min injection)",
+          "Type": "String"
+        },
+        {
+          "Name": "Molecule",
+          "Value": "Morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Route",
+          "Value": "IV",
+          "Type": "String"
+        },
+        {
+          "Name": "Group Id",
+          "Value": "Hoskin1989_IV_5mg",
+          "Type": "String"
+        }
+      ],
+      "Columns": [
+        {
+          "Name": "Measurement",
+          "RelatedColumns": [
+            {
+              "Name": "Error",
+              "QuantityInfo": {
+                "Path": "Hoskin1989_Morphine_Sub_0|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Error"
+              },
+              "DataInfo": {
+                "Origin": "ObservationAuxiliary",
+                "AuxiliaryType": "ArithmeticStdDev",
+                "MolWeight": 285.33766,
+                "LLOQ": 0.0
+              },
+              "Values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "Dimension": "Concentration (mass)",
+              "Unit": "ng/ml"
+            }
+          ],
+          "QuantityInfo": {
+            "Path": "Hoskin1989_Morphine_Sub_0|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
+          },
+          "DataInfo": {
+            "Origin": "Observation",
+            "AuxiliaryType": "Undefined",
+            "MolWeight": 285.33766,
+            "LLOQ": 1E-10
+          },
+          "Values": [
+            8.53,
+            3.25,
+            3.56000018,
+            3.07,
+            2.27,
+            2.15999985,
+            2.05,
+            1.51,
+            0.95,
+            0.53,
+            0.46,
+            0.37
+          ],
+          "Dimension": "Concentration (mass)",
+          "Unit": "ng/ml"
+        }
+      ],
+      "BaseGrid": {
+        "Name": "Time",
+        "QuantityInfo": {
+          "Path": "Hoskin1989_Morphine_Sub_0|Time",
+          "Type": "Time"
+        },
+        "DataInfo": {
+          "Origin": "BaseGrid",
+          "AuxiliaryType": "Undefined"
+        },
+        "Values": [
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          5.0,
+          6.0,
+          8.0,
+          10.0,
+          12.0
+        ],
+        "Dimension": "Time",
+        "Unit": "h"
+      }
+    },
+    {
+      "Name": "Hoskin1989_Morphine_Sub_1",
+      "ExtendedProperties": [
+        {
+          "Name": "Sheet",
+          "Value": "IV_morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Study Id",
+          "Value": "Hoskin 1989",
+          "Type": "String"
+        },
+        {
+          "Name": "Subject Id",
+          "Value": "Subject 2",
+          "Type": "String"
+        },
+        {
+          "Name": "Organ",
+          "Value": "Peripheral Venous Blood",
+          "Type": "String"
+        },
+        {
+          "Name": "Compartment",
+          "Value": "Plasma",
+          "Type": "String"
+        },
+        {
+          "Name": "Species",
+          "Value": "Human",
+          "Type": "String"
+        },
+        {
+          "Name": "Dose",
+          "Value": "5 mg morphine sulphate IV (2 min injection)",
+          "Type": "String"
+        },
+        {
+          "Name": "Molecule",
+          "Value": "Morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Route",
+          "Value": "IV",
+          "Type": "String"
+        },
+        {
+          "Name": "Group Id",
+          "Value": "Hoskin1989_IV_5mg",
+          "Type": "String"
+        }
+      ],
+      "Columns": [
+        {
+          "Name": "Measurement",
+          "RelatedColumns": [
+            {
+              "Name": "Error",
+              "QuantityInfo": {
+                "Path": "Hoskin1989_Morphine_Sub_1|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Error"
+              },
+              "DataInfo": {
+                "Origin": "ObservationAuxiliary",
+                "AuxiliaryType": "ArithmeticStdDev",
+                "MolWeight": 285.33766,
+                "LLOQ": 0.0
+              },
+              "Values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "Dimension": "Concentration (mass)",
+              "Unit": "ng/ml"
+            }
+          ],
+          "QuantityInfo": {
+            "Path": "Hoskin1989_Morphine_Sub_1|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
+          },
+          "DataInfo": {
+            "Origin": "Observation",
+            "AuxiliaryType": "Undefined",
+            "MolWeight": 285.33766,
+            "LLOQ": 1E-10
+          },
+          "Values": [
+            4.25999975,
+            2.8,
+            1.80000007,
+            1.29,
+            0.41,
+            0.2
+          ],
+          "Dimension": "Concentration (mass)",
+          "Unit": "ng/ml"
+        }
+      ],
+      "BaseGrid": {
+        "Name": "Time",
+        "QuantityInfo": {
+          "Path": "Hoskin1989_Morphine_Sub_1|Time",
+          "Type": "Time"
+        },
+        "DataInfo": {
+          "Origin": "BaseGrid",
+          "AuxiliaryType": "Undefined"
+        },
+        "Values": [
+          3.5,
+          4.0,
+          5.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "Dimension": "Time",
+        "Unit": "h"
+      }
+    },
+    {
+      "Name": "Hoskin1989_Morphine_Sub_2",
+      "ExtendedProperties": [
+        {
+          "Name": "Sheet",
+          "Value": "IV_morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Study Id",
+          "Value": "Hoskin 1989",
+          "Type": "String"
+        },
+        {
+          "Name": "Subject Id",
+          "Value": "Subject 3",
+          "Type": "String"
+        },
+        {
+          "Name": "Organ",
+          "Value": "Peripheral Venous Blood",
+          "Type": "String"
+        },
+        {
+          "Name": "Compartment",
+          "Value": "Plasma",
+          "Type": "String"
+        },
+        {
+          "Name": "Species",
+          "Value": "Human",
+          "Type": "String"
+        },
+        {
+          "Name": "Dose",
+          "Value": "5 mg morphine sulphate IV (2 min injection)",
+          "Type": "String"
+        },
+        {
+          "Name": "Molecule",
+          "Value": "Morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Route",
+          "Value": "IV",
+          "Type": "String"
+        },
+        {
+          "Name": "Group Id",
+          "Value": "Hoskin1989_IV_5mg",
+          "Type": "String"
+        }
+      ],
+      "Columns": [
+        {
+          "Name": "Measurement",
+          "RelatedColumns": [
+            {
+              "Name": "Error",
+              "QuantityInfo": {
+                "Path": "Hoskin1989_Morphine_Sub_2|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Error"
+              },
+              "DataInfo": {
+                "Origin": "ObservationAuxiliary",
+                "AuxiliaryType": "ArithmeticStdDev",
+                "MolWeight": 285.33766,
+                "LLOQ": 0.0
+              },
+              "Values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "Dimension": "Concentration (mass)",
+              "Unit": "ng/ml"
+            }
+          ],
+          "QuantityInfo": {
+            "Path": "Hoskin1989_Morphine_Sub_2|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
+          },
+          "DataInfo": {
+            "Origin": "Observation",
+            "AuxiliaryType": "Undefined",
+            "MolWeight": 285.33766,
+            "LLOQ": 1E-10
+          },
+          "Values": [
+            17.1199989,
+            12.02,
+            15.499999,
+            6.58,
+            4.72,
+            4.77,
+            3.79,
+            2.8,
+            2.59,
+            1.75,
+            1.59,
+            1.2,
+            0.76,
+            0.52,
+            0.2
+          ],
+          "Dimension": "Concentration (mass)",
+          "Unit": "ng/ml"
+        }
+      ],
+      "BaseGrid": {
+        "Name": "Time",
+        "QuantityInfo": {
+          "Path": "Hoskin1989_Morphine_Sub_2|Time",
+          "Type": "Time"
+        },
+        "DataInfo": {
+          "Origin": "BaseGrid",
+          "AuxiliaryType": "Undefined"
+        },
+        "Values": [
+          0.083,
+          0.25,
+          0.5,
+          0.75,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          5.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "Dimension": "Time",
+        "Unit": "h"
+      }
+    },
+    {
+      "Name": "Hoskin1989_Morphine_Sub_3",
+      "ExtendedProperties": [
+        {
+          "Name": "Sheet",
+          "Value": "IV_morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Study Id",
+          "Value": "Hoskin 1989",
+          "Type": "String"
+        },
+        {
+          "Name": "Subject Id",
+          "Value": "Subject 4",
+          "Type": "String"
+        },
+        {
+          "Name": "Organ",
+          "Value": "Peripheral Venous Blood",
+          "Type": "String"
+        },
+        {
+          "Name": "Compartment",
+          "Value": "Plasma",
+          "Type": "String"
+        },
+        {
+          "Name": "Species",
+          "Value": "Human",
+          "Type": "String"
+        },
+        {
+          "Name": "Dose",
+          "Value": "5 mg morphine sulphate IV (2 min injection)",
+          "Type": "String"
+        },
+        {
+          "Name": "Molecule",
+          "Value": "Morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Route",
+          "Value": "IV",
+          "Type": "String"
+        },
+        {
+          "Name": "Group Id",
+          "Value": "Hoskin1989_IV_5mg",
+          "Type": "String"
+        }
+      ],
+      "Columns": [
+        {
+          "Name": "Measurement",
+          "RelatedColumns": [
+            {
+              "Name": "Error",
+              "QuantityInfo": {
+                "Path": "Hoskin1989_Morphine_Sub_3|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Error"
+              },
+              "DataInfo": {
+                "Origin": "ObservationAuxiliary",
+                "AuxiliaryType": "ArithmeticStdDev",
+                "MolWeight": 285.33766,
+                "LLOQ": 0.0
+              },
+              "Values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "Dimension": "Concentration (mass)",
+              "Unit": "ng/ml"
+            }
+          ],
+          "QuantityInfo": {
+            "Path": "Hoskin1989_Morphine_Sub_3|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
+          },
+          "DataInfo": {
+            "Origin": "Observation",
+            "AuxiliaryType": "Undefined",
+            "MolWeight": 285.33766,
+            "LLOQ": 1E-10
+          },
+          "Values": [
+            4.41,
+            3.84,
+            3.25,
+            2.54,
+            2.35,
+            2.13999987,
+            1.42,
+            0.66
+          ],
+          "Dimension": "Concentration (mass)",
+          "Unit": "ng/ml"
+        }
+      ],
+      "BaseGrid": {
+        "Name": "Time",
+        "QuantityInfo": {
+          "Path": "Hoskin1989_Morphine_Sub_3|Time",
+          "Type": "Time"
+        },
+        "DataInfo": {
+          "Origin": "BaseGrid",
+          "AuxiliaryType": "Undefined"
+        },
+        "Values": [
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          5.0,
+          6.0
+        ],
+        "Dimension": "Time",
+        "Unit": "h"
+      }
+    },
+    {
+      "Name": "Hoskin1989_Morphine_Sub_4",
+      "ExtendedProperties": [
+        {
+          "Name": "Sheet",
+          "Value": "IV_morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Study Id",
+          "Value": "Hoskin 1989",
+          "Type": "String"
+        },
+        {
+          "Name": "Subject Id",
+          "Value": "Subject 5",
+          "Type": "String"
+        },
+        {
+          "Name": "Organ",
+          "Value": "Peripheral Venous Blood",
+          "Type": "String"
+        },
+        {
+          "Name": "Compartment",
+          "Value": "Plasma",
+          "Type": "String"
+        },
+        {
+          "Name": "Species",
+          "Value": "Human",
+          "Type": "String"
+        },
+        {
+          "Name": "Dose",
+          "Value": "5 mg morphine sulphate IV (2 min injection)",
+          "Type": "String"
+        },
+        {
+          "Name": "Molecule",
+          "Value": "Morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Route",
+          "Value": "IV",
+          "Type": "String"
+        },
+        {
+          "Name": "Group Id",
+          "Value": "Hoskin1989_IV_5mg",
+          "Type": "String"
+        }
+      ],
+      "Columns": [
+        {
+          "Name": "Measurement",
+          "RelatedColumns": [
+            {
+              "Name": "Error",
+              "QuantityInfo": {
+                "Path": "Hoskin1989_Morphine_Sub_4|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Error"
+              },
+              "DataInfo": {
+                "Origin": "ObservationAuxiliary",
+                "AuxiliaryType": "ArithmeticStdDev",
+                "MolWeight": 285.33766,
+                "LLOQ": 0.0
+              },
+              "Values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "Dimension": "Concentration (mass)",
+              "Unit": "ng/ml"
+            }
+          ],
+          "QuantityInfo": {
+            "Path": "Hoskin1989_Morphine_Sub_4|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
+          },
+          "DataInfo": {
+            "Origin": "Observation",
+            "AuxiliaryType": "Undefined",
+            "MolWeight": 285.33766,
+            "LLOQ": 1E-10
+          },
+          "Values": [
+            6.09,
+            5.47,
+            3.66,
+            2.92,
+            2.91,
+            2.4,
+            1.95999992,
+            1.56000006,
+            1.06,
+            0.56
+          ],
+          "Dimension": "Concentration (mass)",
+          "Unit": "ng/ml"
+        }
+      ],
+      "BaseGrid": {
+        "Name": "Time",
+        "QuantityInfo": {
+          "Path": "Hoskin1989_Morphine_Sub_4|Time",
+          "Type": "Time"
+        },
+        "DataInfo": {
+          "Origin": "BaseGrid",
+          "AuxiliaryType": "Undefined"
+        },
+        "Values": [
+          0.75,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          5.0,
+          6.0
+        ],
+        "Dimension": "Time",
+        "Unit": "h"
+      }
+    },
+    {
+      "Name": "Hoskin1989_Morphine_Sub_5",
+      "ExtendedProperties": [
+        {
+          "Name": "Sheet",
+          "Value": "IV_morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Study Id",
+          "Value": "Hoskin 1989",
+          "Type": "String"
+        },
+        {
+          "Name": "Subject Id",
+          "Value": "Subject 6",
+          "Type": "String"
+        },
+        {
+          "Name": "Organ",
+          "Value": "Peripheral Venous Blood",
+          "Type": "String"
+        },
+        {
+          "Name": "Compartment",
+          "Value": "Plasma",
+          "Type": "String"
+        },
+        {
+          "Name": "Species",
+          "Value": "Human",
+          "Type": "String"
+        },
+        {
+          "Name": "Dose",
+          "Value": "5 mg morphine sulphate IV (2 min injection)",
+          "Type": "String"
+        },
+        {
+          "Name": "Molecule",
+          "Value": "Morphine",
+          "Type": "String"
+        },
+        {
+          "Name": "Route",
+          "Value": "IV",
+          "Type": "String"
+        },
+        {
+          "Name": "Group Id",
+          "Value": "Hoskin1989_IV_5mg",
+          "Type": "String"
+        }
+      ],
+      "Columns": [
+        {
+          "Name": "Measurement",
+          "RelatedColumns": [
+            {
+              "Name": "Error",
+              "QuantityInfo": {
+                "Path": "Hoskin1989_Morphine_Sub_5|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Error"
+              },
+              "DataInfo": {
+                "Origin": "ObservationAuxiliary",
+                "AuxiliaryType": "ArithmeticStdDev",
+                "MolWeight": 285.33766,
+                "LLOQ": 0.0
+              },
+              "Values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "Dimension": "Concentration (mass)",
+              "Unit": "ng/ml"
+            }
+          ],
+          "QuantityInfo": {
+            "Path": "Hoskin1989_Morphine_Sub_5|ObservedData|Peripheral Venous Blood|Plasma|Morphine|Measurement"
+          },
+          "DataInfo": {
+            "Origin": "Observation",
+            "AuxiliaryType": "Undefined",
+            "MolWeight": 285.33766,
+            "LLOQ": 1E-10
+          },
+          "Values": [
+            9.05,
+            6.48,
+            5.69,
+            3.66,
+            2.86000013,
+            3.59000015,
+            2.42,
+            2.14999986,
+            1.79000008,
+            1.21,
+            0.53
+          ],
+          "Dimension": "Concentration (mass)",
+          "Unit": "ng/ml"
+        }
+      ],
+      "BaseGrid": {
+        "Name": "Time",
+        "QuantityInfo": {
+          "Path": "Hoskin1989_Morphine_Sub_5|Time",
+          "Type": "Time"
+        },
+        "DataInfo": {
+          "Origin": "BaseGrid",
+          "AuxiliaryType": "Undefined"
+        },
+        "Values": [
+          0.5,
+          0.75,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          5.0,
+          6.0
         ],
         "Dimension": "Time",
         "Unit": "h"

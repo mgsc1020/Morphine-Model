@@ -54,4 +54,8 @@
 
 **Hasselström 1993** Hasselström J, Säwe J. Morphine pharmacokinetics and metabolism in humans. Enterohepatic cycling and relative contribution of metabolites to active opioid concentrations. Clin Pharmacokinet. 1993 Apr;24(4):344-54. doi: 10.2165/00003088-199324040-00007. PMID: 8491060.
 
-**Projean 2003** Projean D, Minh Tu T, Ducharme J. Rapid and simple method to determine morphine and its metabolites in rat plasma by liquid chromatography-mass spectrometry. J Chromatogr B Analyt Technol Biomed Life Sci. 2003 Apr 25;787(2):243-53. doi: 10.1016/s1570-0232(02)00726-2. PMID: 12650748.
+**Projean 2003a** Projean D, Morin PE, Tu TM, Ducharme J. Identification of CYP3A4 and CYP2C8 as the major cytochrome P450s responsible for morphine N-demethylation in human liver microsomes. Xenobiotica. 2003;33(8):841-854. doi: 10.1080/0049825031000121608.
+
+**Projean 2003b** Projean D, Minh Tu T, Ducharme J. Rapid and simple method to determine morphine and its metabolites in rat plasma by liquid chromatography-mass spectrometry. J Chromatogr B Analyt Technol Biomed Life Sci. 2003 Apr 25;787(2):243-53. doi: 10.1016/s1570-0232(02)00726-2. PMID: 12650748.
+
+**Coffman 1997** Coffman BL, Rios GR, King CD, Tephly TR. Human UGT2B7 catalyzes morphine glucuronidation. Drug Metab Dispos. 1997 Jan;25(1):1-4. PMID: 9010622.

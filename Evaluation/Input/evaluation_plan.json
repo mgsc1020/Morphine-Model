@@ -258,12 +258,12 @@
                                 "Simulation": "Hoskin1989_IV_3.76mg",
                                 "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
                                 "ObservedData": [
-                                    "Hoskin1989_Sub1_Morphine",
-                                    "Hoskin1989_Sub2_Morphine",
-                                    "Hoskin1989_Sub3_Morphine",
-                                    "Hoskin1989_Sub4_Morphine",
-                                    "Hoskin1989_Sub5_Morphine",
-                                    "Hoskin1989_Sub6_Morphine"
+                                    "Hoskin1989_Morphine_Sub_0",
+                                    "Hoskin1989_Morphine_Sub_1",
+                                    "Hoskin1989_Morphine_Sub_2",
+                                    "Hoskin1989_Morphine_Sub_3",
+                                    "Hoskin1989_Morphine_Sub_4",
+                                    "Hoskin1989_Morphine_Sub_5"
                                 ],
                                 "Color": "#9467BD"
                             },

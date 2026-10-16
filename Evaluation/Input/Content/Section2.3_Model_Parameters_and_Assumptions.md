@@ -6,7 +6,7 @@ All clinical studies included in this model were administered intravenously as a
 
 Morphine, M6G, and M3G were parameterized with albumin as plasma protein binding partner, using the fraction unbound values described in [Section 2.2](#methods-data).
 
-After testing the available organ-plasma partition coefficient and cell permeability calculation methods built in PK-Sim (including `Rodgers and Rowland`, `Berezhkovskiy`, `Poulin and Theil`, and `Schmitt`), observed clinical data was best described by choosing the partition coefficient calculation by `Rodgers and Rowland` for all three compounds, and the cellular permeability calculation by `Charge dependent Schmitt` for morphine and M6G, and `PK-Sim Standard` for M3G.
+The organ-plasma partition coefficient and cellular permeability calculation methods for morphine and M6G (`Rodgers and Rowland` and `Charge dependent Schmitt`) were adopted from the model by Schaefer et al. ([Schaefer 2018](#main-references)). For M3G, the available methods built in PK-Sim were tested in a categorial parameter identification against the model-building data. The observed data were best described using `Rodgers and Rowland` for the partition coefficients and `PK-Sim Standard` for the cellular permeability.
 
 ### Metabolism and Elimination <a id="model-parameters-and-assumptions-metabolism-and-elimination"></a>
 
@@ -14,13 +14,13 @@ Morphine is eliminated by two parallel first-order UGT2B7 pathways, forming M6G 
 
 ### Automated Parameter Identification <a id="model-parameters-and-assumptions-parameter-identification"></a>
 
-This is the result of the final parameter identification.
+The intrinsic clearances of morphine via CYP3A4, UGT2B7 (→ M6G), and UGT2B7 (→ M3G) were identified simultaneously against the model-building data ([Säwe 1985](#main-references), [Crews 2001](#main-references)). The specific organ permeabilities of morphine and M6G and the M6G tubular secretion were taken from the model by Schaefer et al. ([Schaefer 2018](#main-references)), where they were fitted to data from Lötsch et al. ([Lötsch 2002](#main-references)).
 
-| Model Parameter         | Unit  |
-| ---------------------------------------------- | ----- |
-| Morphine – Pcell – Specific organ permeability            | cm/min |
-| Morphine – CYP3A4 – Intrinsic clearance                    | l/min |
-| Morphine – UGT2B7 (→ M6G) – Intrinsic clearance            | l/min |
-| Morphine – UGT2B7 (→ M3G) – Intrinsic clearance             | l/min |
-| M6G – Pcell – Specific organ permeability                    | cm/min |
-| M6G – TS – Tubular secretion                    | l/min |
+| Model Parameter                                  | Unit   | Source                                  |
+| ------------------------------------------------ | ------ | --------------------------------------- |
+| Morphine – CYP3A4 – Intrinsic clearance          | l/min  | Parameter identification (this work)    |
+| Morphine – UGT2B7 (→ M6G) – Intrinsic clearance  | l/min  | Parameter identification (this work)    |
+| Morphine – UGT2B7 (→ M3G) – Intrinsic clearance  | l/min  | Parameter identification (this work)    |
+| Morphine – Pcell – Specific organ permeability   | cm/min | [Schaefer 2018](#main-references)       |
+| M6G – Pcell – Specific organ permeability        | cm/min | [Schaefer 2018](#main-references)       |
+| M6G – TS – Tubular secretion                     | l/min  | [Schaefer 2018](#main-references)       |

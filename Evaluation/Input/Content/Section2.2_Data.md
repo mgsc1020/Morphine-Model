@@ -64,4 +64,4 @@ The following studies were used for model verification:
 
 \*PK profiles were corrected to a dose of 10 mg/70 kg ([Stuart-Harris 2000](#main-references)).
 
-Morphine sulphate and Morphine Hydrochloride doses were converted to morphine base.
+Morphine sulphate and morphine hydrochloride doses were converted to morphine base.
