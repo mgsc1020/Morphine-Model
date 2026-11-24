@@ -157,7 +157,7 @@
             },
             {
                 "Project": "Morphine",
-                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg",
                 "SectionReference": "ct-profiles"
             },
             {
@@ -232,6 +232,34 @@
                                 "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
                                 "ObservedData": "Crews2001_Morphine",
                                 "Color": "#FF7F0E"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Hoskin1989_IV_3.76mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": [
+                                    "Hoskin1989_Sub1_Morphine",
+                                    "Hoskin1989_Sub2_Morphine",
+                                    "Hoskin1989_Sub3_Morphine",
+                                    "Hoskin1989_Sub4_Morphine",
+                                    "Hoskin1989_Sub5_Morphine",
+                                    "Hoskin1989_Sub6_Morphine"
+                                ],
+                                "Color": "#9467BD"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Dershwitz2000_IV_6.62mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Dershwitz2000_Morphine",
+                                "Color": "#FFBB78"
+                            },
+                            {
+                                "Project": "Morphine",
+                                "Simulation": "Baillie1989_IV_7.52mg",
+                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
+                                "ObservedData": "Baillie1989_Morphine",
+                                "Color": "#C49C94"
                             }
                         ]
                     },
@@ -255,21 +283,7 @@
                             },
                             {
                                 "Project": "Morphine",
-                                "Simulation": "Hoskin1989_IV_3.76mg",
-                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": [
-                                    "Hoskin1989_Morphine_Sub_0",
-                                    "Hoskin1989_Morphine_Sub_1",
-                                    "Hoskin1989_Morphine_Sub_2",
-                                    "Hoskin1989_Morphine_Sub_3",
-                                    "Hoskin1989_Morphine_Sub_4",
-                                    "Hoskin1989_Morphine_Sub_5"
-                                ],
-                                "Color": "#9467BD"
-                            },
-                            {
-                                "Project": "Morphine",
-                                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+                                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg",
                                 "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
                                 "ObservedData": "Lötsch1998_D_Morphine",
                                 "Color": "#BCBD22"
@@ -283,24 +297,10 @@
                             },
                             {
                                 "Project": "Morphine",
-                                "Simulation": "Dershwitz2000_IV_6.62mg",
-                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Dershwitz2000_Morphine",
-                                "Color": "#FFBB78"
-                            },
-                            {
-                                "Project": "Morphine",
                                 "Simulation": "Stuart-Harris2000_IV_7.52mg",
                                 "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
                                 "ObservedData": "Stuart-Harris2000_Morphine",
                                 "Color": "#AEC7E8"
-                            },
-                            {
-                                "Project": "Morphine",
-                                "Simulation": "Baillie1989_IV_7.52mg",
-                                "Output": "Organism|PeripheralVenousBlood|Morphine|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Baillie1989_Morphine",
-                                "Color": "#C49C94"
                             },
                             {
                                 "Project": "Morphine",
@@ -380,7 +380,7 @@
                             },
                             {
                                 "Project": "Morphine",
-                                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg_M6G",
+                                "Simulation": "Lötsch1998_IVdosageD_0.124+0.177mg/kg",
                                 "Output": "Organism|PeripheralVenousBlood|Morphine-6G|Plasma (Peripheral Venous Blood)",
                                 "ObservedData": "Lötsch1998_D_M6G",
                                 "Color": "#BCBD22"

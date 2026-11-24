@@ -59,3 +59,5 @@
 **Projean 2003b** Projean D, Minh Tu T, Ducharme J. Rapid and simple method to determine morphine and its metabolites in rat plasma by liquid chromatography-mass spectrometry. J Chromatogr B Analyt Technol Biomed Life Sci. 2003 Apr 25;787(2):243-53. doi: 10.1016/s1570-0232(02)00726-2. PMID: 12650748.
 
 **Coffman 1997** Coffman BL, Rios GR, King CD, Tephly TR. Human UGT2B7 catalyzes morphine glucuronidation. Drug Metab Dispos. 1997 Jan;25(1):1-4. PMID: 9010622.
+
+**ScienceDirect Topics** Normorphine – an overview. ScienceDirect Topics, Elsevier. Available from: [https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/normorphine](https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/normorphine). Accessed: 2026-11-17.

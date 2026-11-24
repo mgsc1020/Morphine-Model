@@ -34,7 +34,7 @@ A literature search was performed to collect available information on the physic
 
 ### Clinical Data  <a id="clinical-data"></a>
 
-A literature search was performed to collect available clinical data on morphine, M6G, and M3G plasma concentrations in healthy adults after intravenous administration of morphine or M6G. Five M3G plasma concentration datasets were identified in the literature; two were used for model building ([Säwe 1985](#main-references), [Crews 2001](#main-references)) and three for model verification ([Osborne 1990](#main-references), [Ferslew 2015](#main-references), [Stuart-Harris 2000](#main-references)). Although the Säwe et al. study was conducted in cancer patients rather than healthy volunteers, it was retained for model building because morphine and M3G pharmacokinetics observed in this population were in overall agreement with those observed in healthy volunteers.
+A literature search was performed to collect available clinical data on morphine, M6G, and M3G plasma concentrations in healthy adults after intravenous administration of morphine or M6G. In total, eleven clinical studies were identified, five of which were used for model building. The morphine plasma concentrations of [Dershwitz 2000](#main-references), [Baillie 1989](#main-references), and [Hoskin 1989](#main-references) were used to identify the metabolic clearances of morphine. Of the five M3G plasma concentration datasets identified, two ([Säwe 1985](#main-references), [Crews 2001](#main-references)) were used to select the M3G distribution calculation methods. The remaining six studies, including the three other M3G datasets ([Osborne 1990](#main-references), [Ferslew 2015](#main-references), [Stuart-Harris 2000](#main-references)), were used for model verification. Although the Säwe et al. study was conducted in cancer patients rather than healthy volunteers, it was retained for model building because morphine and M3G pharmacokinetics observed in this population were in overall agreement with those observed in healthy volunteers.
 
 #### Model Building <a id="model-building"></a>
 
@@ -42,8 +42,11 @@ The following studies were used for model building (training data):
 
 | Publication                 | Arm / Treatment / Information used for model building |
 | :-------------------------- | :---------------------------------------------------- |
-| [Säwe 1985](#main-references) | Cancer patients, 2-minute intravenous infusion of 3.55 mg morphine; morphine and M3G plasma concentrations |
-| [Crews 2001](#main-references) | Healthy volunteers, 5-minute intravenous infusion of 7.52 mg morphine; morphine, M6G, and M3G plasma concentrations |
+| [Dershwitz 2000](#main-references) | Healthy volunteers, 7-minute intravenous infusion of 6.62 mg morphine; morphine plasma concentrations (identification of morphine clearances) |
+| [Baillie 1989](#main-references) | Healthy volunteers, 10-minute intravenous infusion of 7.52 mg morphine; morphine plasma concentrations (identification of morphine clearances) |
+| [Hoskin 1989](#main-references) | Healthy volunteers, 2-minute intravenous infusion of 3.76 mg morphine; individual morphine plasma concentrations (identification of morphine clearances) |
+| [Säwe 1985](#main-references) | Cancer patients, 2-minute intravenous infusion of 3.55 mg morphine; morphine and M3G plasma concentrations (selection of M3G distribution calculation methods) |
+| [Crews 2001](#main-references) | Healthy volunteers, 5-minute intravenous infusion of 7.52 mg morphine; morphine, M6G, and M3G plasma concentrations (selection of M3G distribution calculation methods) |
 
 
 #### Model Verification <a id="model-verification"></a>
@@ -54,11 +57,8 @@ The following studies were used for model verification:
 | :-------------------------- | :---------------------------------------------------- |
 | [Lötsch 2002](#main-references) | Healthy volunteers, intravenous bolus of 5.64 mg morphine and intravenous bolus of 1 mg M6G; morphine and M6G plasma concentrations |
 | [Westerling 1995](#main-references) | Healthy volunteers, 20-minute intravenous infusion of 7.59 mg morphine; morphine and M6G plasma concentrations |
-| [Hoskin 1989](#main-references) | Healthy volunteers, 2-minute intravenous infusion of 3.76 mg morphine; individual morphine plasma concentrations |
 | [Lötsch 1998](#main-references) | Healthy volunteers, weight-normalized intravenous bolus-plus-4h-infusion regimens of M6G (0.015+0.0288 to 0.044+0.088 mg/kg) and morphine (0.124+0.177 mg/kg), and a combined regimen; morphine and M6G plasma concentrations |
-| [Dershwitz 2000](#main-references) | Healthy volunteers, 7-minute intravenous infusion of 6.62 mg morphine; morphine plasma concentrations |
 | [Stuart-Harris 2000](#main-references) | Healthy volunteers, 4.8-minute intravenous infusion of 7.52 mg morphine; morphine, M6G, and M3G plasma concentrations\* |
-| [Baillie 1989](#main-references) | Healthy volunteers, 10-minute intravenous infusion of 7.52 mg morphine; morphine plasma concentrations |
 | [Osborne 1990](#main-references) | Healthy volunteers, intravenous bolus of 3.76 mg morphine; morphine, M6G, and M3G plasma concentrations |
 | [Ferslew 2015](#main-references) | Healthy subjects, 5-minute intravenous infusion of 3.76 mg morphine; morphine and M3G plasma concentrations |
 
